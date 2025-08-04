@@ -7,10 +7,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <h3 className="text-xl font-bold">Doon Motors & Tractors</h3>
-            <p className="text-sm text-trust-foreground/80 leading-relaxed">
-              Your trusted Massey Ferguson dealer in Uttarakhand, serving farmers 
-              with quality tractors and equipment for over 25 years.
-            </p>
+            <p className="text-sm text-trust-foreground/80 leading-relaxed">Your trusted Massey Ferguson dealer in Uttarakhand, serving farmers with quality tractors and equipment for over 15+ years.</p>
             <div className="flex items-center space-x-2 text-accent">
               <span className="text-sm font-medium">Official MF Dealer</span>
             </div>
