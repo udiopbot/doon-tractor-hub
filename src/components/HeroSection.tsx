@@ -29,23 +29,23 @@ const HeroSection = () => {
           </div>
 
           {/* Main Heading */}
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight">
             Find Your Ideal
             <span className="text-accent block">Massey Ferguson</span>
             Tractor
           </h1>
 
           {/* Subheading */}
-          <p className="text-xl text-gray-200 mb-8 leading-relaxed">
+          <p className="text-lg sm:text-xl text-gray-200 mb-6 sm:mb-8 leading-relaxed">
             Trusted by farmers across Uttarakhand for over 25 years. 
             Get the best deals, genuine parts, and expert service for your farming needs.
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 mb-12">
+          <div className="flex flex-col sm:flex-row gap-3 mb-8 sm:mb-12">
             <Button 
               size="lg" 
-              className="text-lg px-8 py-6 bg-primary hover:bg-primary/90 shadow-lg"
+              className="text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 bg-primary hover:bg-primary/90 shadow-lg"
             >
               <Phone className="mr-2 h-5 w-5" />
               Get Quote Now
@@ -53,7 +53,7 @@ const HeroSection = () => {
             <Button 
               size="lg" 
               variant="outline" 
-              className="text-lg px-8 py-6 bg-green-600 border-green-600 text-white hover:bg-green-700 hover:border-green-700"
+              className="text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 bg-green-600 border-green-600 text-white hover:bg-green-700 hover:border-green-700"
             >
               <MessageCircle className="mr-2 h-5 w-5" />
               WhatsApp Us
@@ -80,19 +80,19 @@ const HeroSection = () => {
 
       {/* Quick Stats */}
       <div className="absolute bottom-0 right-0 left-0">
-        <div className="container mx-auto px-4 pb-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-3xl ml-auto">
-            <Card className="bg-white/10 backdrop-blur border-white/20 p-4 text-center">
-              <div className="text-2xl font-bold text-white">25+</div>
-              <div className="text-sm text-gray-200">Years of Experience</div>
+        <div className="container mx-auto px-4 pb-4 sm:pb-8">
+          <div className="grid grid-cols-3 md:grid-cols-3 gap-2 sm:gap-4 max-w-3xl ml-auto">
+            <Card className="bg-white/10 backdrop-blur border-white/20 p-2 sm:p-4 text-center">
+              <div className="text-lg sm:text-2xl font-bold text-white">25+</div>
+              <div className="text-xs sm:text-sm text-gray-200">Years</div>
             </Card>
-            <Card className="bg-white/10 backdrop-blur border-white/20 p-4 text-center">
-              <div className="text-2xl font-bold text-white">50+</div>
-              <div className="text-sm text-gray-200">Tractor Models</div>
+            <Card className="bg-white/10 backdrop-blur border-white/20 p-2 sm:p-4 text-center">
+              <div className="text-lg sm:text-2xl font-bold text-white">50+</div>
+              <div className="text-xs sm:text-sm text-gray-200">Models</div>
             </Card>
-            <Card className="bg-white/10 backdrop-blur border-white/20 p-4 text-center">
-              <div className="text-2xl font-bold text-white">24/7</div>
-              <div className="text-sm text-gray-200">Service Support</div>
+            <Card className="bg-white/10 backdrop-blur border-white/20 p-2 sm:p-4 text-center">
+              <div className="text-lg sm:text-2xl font-bold text-white">24/7</div>
+              <div className="text-xs sm:text-sm text-gray-200">Support</div>
             </Card>
           </div>
         </div>
