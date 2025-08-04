@@ -28,17 +28,7 @@ const Footer = () => {
           </div>
 
           {/* Services */}
-          <div className="space-y-4">
-            <h4 className="text-lg font-semibold">Our Services</h4>
-            <ul className="space-y-2 text-sm">
-              <li>Tractor Sales</li>
-              <li>Equipment Rental</li>
-              <li>Service & Repairs</li>
-              <li>Genuine Parts</li>
-              <li>Field Demonstrations</li>
-              <li>EMI & Finance</li>
-            </ul>
-          </div>
+          
 
           {/* Contact Info */}
           <div className="space-y-4">
