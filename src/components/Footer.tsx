@@ -46,7 +46,7 @@ const Footer = () => {
             <div className="space-y-3 text-sm">
               <div className="flex items-start space-x-2">
                 <MapPin className="h-4 w-4 mt-0.5 text-accent" />
-                <span>123 Main Road, Dehradun, Uttarakhand 248001</span>
+                <span>Doon Motors nd Tractors Shimala by pass road, Via, Telpur, chowk, Harbhaj Wala, Uttarakhand 248008</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4 text-accent" />
