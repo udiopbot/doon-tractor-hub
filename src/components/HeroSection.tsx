@@ -3,15 +3,12 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Phone, MessageCircle, Award, Users, Wrench } from "lucide-react";
 import heroImage from "@/assets/hero-tractor.jpg";
-
 const HeroSection = () => {
-  return (
-    <section className="relative min-h-[70vh] flex items-center">
+  return <section className="relative min-h-[70vh] flex items-center">
       {/* Background Image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroImage})` }}
-      >
+      <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
+      backgroundImage: `url(${heroImage})`
+    }}>
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent" />
       </div>
 
@@ -23,9 +20,7 @@ const HeroSection = () => {
             <Badge className="bg-primary/20 text-primary border-primary/30">
               Official Massey Ferguson Dealer
             </Badge>
-            <Badge variant="secondary">
-              Serving Uttarakhand Since 1995
-            </Badge>
+            
           </div>
 
           {/* Main Heading */}
@@ -36,25 +31,15 @@ const HeroSection = () => {
           </h1>
 
           {/* Subheading */}
-          <p className="text-lg sm:text-xl text-gray-200 mb-6 sm:mb-8 leading-relaxed">
-            Trusted by farmers across Uttarakhand for over 25 years. 
-            Get the best deals, genuine parts, and expert service for your farming needs.
-          </p>
+          <p className="text-lg sm:text-xl text-gray-200 mb-6 sm:mb-8 leading-relaxed">Trusted by farmers across Uttarakhand for over 15+ years. Get the best deals, genuine parts, and expert service for your farming needs.</p>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 mb-8 sm:mb-12">
-            <Button 
-              size="lg" 
-              className="text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 bg-primary hover:bg-primary/90 shadow-lg"
-            >
+            <Button size="lg" className="text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 bg-primary hover:bg-primary/90 shadow-lg">
               <Phone className="mr-2 h-5 w-5" />
               Get Quote Now
             </Button>
-            <Button 
-              size="lg" 
-              variant="outline" 
-              className="text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 bg-green-600 border-green-600 text-white hover:bg-green-700 hover:border-green-700"
-            >
+            <Button size="lg" variant="outline" className="text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 bg-green-600 border-green-600 text-white hover:bg-green-700 hover:border-green-700">
               <MessageCircle className="mr-2 h-5 w-5" />
               WhatsApp Us
             </Button>
@@ -97,8 +82,6 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
