@@ -45,7 +45,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-accent" />
-                <span>info@doonmotors.com</span>
+                <span>doonmotors.tractortafe@gmail.com</span>
               </div>
               <div className="flex items-start space-x-2">
                 <Clock className="h-4 w-4 mt-0.5 text-accent" />
