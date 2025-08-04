@@ -1,9 +1,7 @@
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
 const Footer = () => {
-  return (
-    <footer className="bg-trust text-trust-foreground">
+  return <footer className="bg-trust text-trust-foreground">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
@@ -52,7 +50,8 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4 text-accent" />
-                <span>+91 98765 43210</span>
+                <span>+91 78953 27351, +91 97194 42991,
++91 98975 33499</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-accent" />
@@ -61,8 +60,8 @@ const Footer = () => {
               <div className="flex items-start space-x-2">
                 <Clock className="h-4 w-4 mt-0.5 text-accent" />
                 <div>
-                  <div>Mon-Sat: 9:00 AM - 7:00 PM</div>
-                  <div>Sunday: 10:00 AM - 5:00 PM</div>
+                  <div>Mon-Sat: 10:00 AM - 5:00 PM</div>
+                  <div>Sunday: Closed</div>
                 </div>
               </div>
             </div>
@@ -84,8 +83,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
