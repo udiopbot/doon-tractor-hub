@@ -61,7 +61,7 @@ const HeroSection = () => {
           </div>
 
           {/* Trust Indicators */}
-          <div className="flex flex-wrap gap-6 text-white">
+          <div className="flex flex-wrap gap-4 sm:gap-6 text-white mb-16 sm:mb-20">
             <div className="flex items-center gap-2">
               <Award className="h-5 w-5 text-accent" />
               <span className="text-sm">Authorized Dealer</span>
