@@ -21,7 +21,7 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center space-x-3">
             <div className="flex flex-col">
-              <h1 className="text-xl font-bold text-primary">Doon Motors</h1>
+              <h1 className="text-lg sm:text-xl font-bold text-primary">Doon Motors & Tractors</h1>
               <p className="text-xs text-muted-foreground">Official Massey Ferguson Dealer</p>
             </div>
           </div>
