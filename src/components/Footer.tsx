@@ -63,8 +63,8 @@ const Footer = () => {
         <div className="border-t border-trust-foreground/20 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm text-trust-foreground/60">© 2025 Doon Motors & Tractors. All rights reserved.</p>
           <div className="flex items-center space-x-4 mt-4 md:mt-0 text-sm">
-            <span className="text-trust-foreground/60">Powered by</span>
-            <span className="font-medium text-accent">Massey Ferguson</span>
+            <span className="text-trust-foreground/60">Managed by</span>
+            <span className="font-medium text-accent">Doon Motors and Tractors</span>
           </div>
         </div>
       </div>
