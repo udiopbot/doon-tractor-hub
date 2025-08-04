@@ -68,7 +68,7 @@ const HeroSection = () => {
         <div className="container mx-auto px-4 pb-4 sm:pb-8">
           <div className="grid grid-cols-3 md:grid-cols-3 gap-2 sm:gap-4 max-w-3xl ml-auto">
             <Card className="bg-white/10 backdrop-blur border-white/20 p-2 sm:p-4 text-center">
-              <div className="text-lg sm:text-2xl font-bold text-white">25+</div>
+              <div className="text-lg sm:text-2xl font-bold text-white">15+</div>
               <div className="text-xs sm:text-sm text-gray-200">Years</div>
             </Card>
             <Card className="bg-white/10 backdrop-blur border-white/20 p-2 sm:p-4 text-center">
