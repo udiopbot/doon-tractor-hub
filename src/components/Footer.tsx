@@ -37,8 +37,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4 text-accent" />
-                <span>+91 78953 27351, +91 97194 42991,
-+91 98975 33499</span>
+                <span>+91 78953 27351, +91 97194 42991, +91 98975 33499</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-accent" />
@@ -53,7 +52,10 @@ const Footer = () => {
               </div>
             </div>
 
-            <Button className="w-full mt-4 bg-green-600 hover:bg-green-700">
+            <Button 
+              className="w-full mt-4 bg-green-600 hover:bg-green-700"
+              onClick={() => window.open('https://wa.me/917895327351', '_blank')}
+            >
               WhatsApp Us Now
             </Button>
           </div>

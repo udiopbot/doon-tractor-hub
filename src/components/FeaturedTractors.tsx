@@ -83,8 +83,14 @@ const FeaturedTractors = () => {
                     <p className="text-sm text-muted-foreground">{tractor.category}</p>
                   </div>
                   <div className="text-right">
-                    <p className="text-lg font-bold text-primary">{tractor.priceRange}</p>
-                    <p className="text-xs text-muted-foreground">Ex-Showroom</p>
+                    <Button 
+                      size="sm" 
+                      variant="outline" 
+                      className="text-xs"
+                      onClick={() => window.open('tel:+917895327351')}
+                    >
+                      Contact for Price
+                    </Button>
                   </div>
                 </div>
               </CardHeader>
@@ -105,17 +111,31 @@ const FeaturedTractors = () => {
 
                   {/* Action Buttons */}
                   <div className="grid grid-cols-2 gap-2">
-                    <Button size="sm" className="text-xs">
+                    <Button 
+                      size="sm" 
+                      className="text-xs"
+                      onClick={() => window.open('tel:+917895327351')}
+                    >
                       <Phone className="mr-1 h-3 w-3" />
                       Get Quote
                     </Button>
-                    <Button size="sm" variant="outline" className="text-xs">
+                    <Button 
+                      size="sm" 
+                      variant="outline" 
+                      className="text-xs"
+                      onClick={() => window.open('https://wa.me/917895327351', '_blank')}
+                    >
                       <Eye className="mr-1 h-3 w-3" />
                       View Details
                     </Button>
                   </div>
                   
-                  <Button size="sm" variant="secondary" className="w-full text-xs">
+                  <Button 
+                    size="sm" 
+                    variant="secondary" 
+                    className="w-full text-xs"
+                    onClick={() => window.open('mailto:doonmotors.tractortafe@gmail.com?subject=Brochure Request for ' + tractor.series)}
+                  >
                     <Download className="mr-1 h-3 w-3" />
                     Download Brochure
                   </Button>

@@ -25,9 +25,8 @@ const HeroSection = () => {
 
           {/* Main Heading */}
           <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight">
-            Find Your Ideal
-            <span className="text-accent block">Massey Ferguson</span>
-            Tractor
+            Khet mai massey,
+            <span className="text-accent block">dil mai tafe</span>
           </h1>
 
           {/* Subheading */}
@@ -35,11 +34,20 @@ const HeroSection = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 mb-8 sm:mb-12">
-            <Button size="lg" className="text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 bg-primary hover:bg-primary/90 shadow-lg">
+            <Button 
+              size="lg" 
+              className="text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 bg-primary hover:bg-primary/90 shadow-lg"
+              onClick={() => window.open('tel:+917895327351')}
+            >
               <Phone className="mr-2 h-5 w-5" />
               Get Quote Now
             </Button>
-            <Button size="lg" variant="outline" className="text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 bg-green-600 border-green-600 text-white hover:bg-green-700 hover:border-green-700">
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 bg-green-600 border-green-600 text-white hover:bg-green-700 hover:border-green-700"
+              onClick={() => window.open('https://wa.me/917895327351', '_blank')}
+            >
               <MessageCircle className="mr-2 h-5 w-5" />
               WhatsApp Us
             </Button>

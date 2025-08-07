@@ -40,11 +40,20 @@ const Header = () => {
 
           {/* Desktop CTA Buttons */}
           <div className="hidden md:flex items-center space-x-3">
-            <Button variant="outline" size="sm" className="gap-2">
+            <Button 
+              variant="outline" 
+              size="sm" 
+              className="gap-2"
+              onClick={() => window.open('tel:+917895327351')}
+            >
               <Phone className="h-4 w-4" />
               Call Now
             </Button>
-            <Button size="sm" className="gap-2 bg-green-600 hover:bg-green-700">
+            <Button 
+              size="sm" 
+              className="gap-2 bg-green-600 hover:bg-green-700"
+              onClick={() => window.open('https://wa.me/917895327351', '_blank')}
+            >
               <MessageCircle className="h-4 w-4" />
               WhatsApp
             </Button>
@@ -71,11 +80,17 @@ const Header = () => {
                 </nav>
 
                 <div className="space-y-3 pt-6 border-t">
-                  <Button className="w-full gap-2">
+                  <Button 
+                    className="w-full gap-2"
+                    onClick={() => window.open('tel:+917895327351')}
+                  >
                     <Phone className="h-4 w-4" />
-                    Call Now: +91 98765 43210
+                    Call Now: +91 78953 27351
                   </Button>
-                  <Button className="w-full gap-2 bg-green-600 hover:bg-green-700">
+                  <Button 
+                    className="w-full gap-2 bg-green-600 hover:bg-green-700"
+                    onClick={() => window.open('https://wa.me/917895327351', '_blank')}
+                  >
                     <MessageCircle className="h-4 w-4" />
                     Chat on WhatsApp
                   </Button>
