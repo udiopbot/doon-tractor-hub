@@ -164,8 +164,8 @@ const Implements = () => {
   const filteredImplements = equipmentList.filter(implement => {
     const matchesSearch = implement.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          implement.category.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = selectedCategory === "" || implement.category === selectedCategory;
-    const matchesCompatibility = selectedCompatibility === "" || 
+    const matchesCategory = !selectedCategory || selectedCategory === "all" || implement.category === selectedCategory;
+    const matchesCompatibility = !selectedCompatibility || selectedCompatibility === "all" || 
                                 implement.compatibility.includes(selectedCompatibility);
     return matchesSearch && matchesCategory && matchesCompatibility;
   });
@@ -264,8 +264,8 @@ const Implements = () => {
                   <SelectTrigger className="w-full md:w-48">
                     <SelectValue placeholder="Category" />
                   </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="">All Categories</SelectItem>
+                  <SelectContent className="z-50 bg-popover">
+                    <SelectItem value="all">All Categories</SelectItem>
                     <SelectItem value="Loaders">Loaders</SelectItem>
                     <SelectItem value="Seeders">Seeders</SelectItem>
                     <SelectItem value="Tillers">Tillers</SelectItem>
@@ -280,8 +280,8 @@ const Implements = () => {
                   <SelectTrigger className="w-full md:w-48">
                     <SelectValue placeholder="HP Range" />
                   </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="">All HP</SelectItem>
+                  <SelectContent className="z-50 bg-popover">
+                    <SelectItem value="all">All HP</SelectItem>
                     <SelectItem value="35">35-45 HP</SelectItem>
                     <SelectItem value="40">40-50 HP</SelectItem>
                     <SelectItem value="45">45-55 HP</SelectItem>

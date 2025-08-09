@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -161,8 +161,8 @@ const Tractors = () => {
   const filteredTractors = tractors.filter(tractor => {
     const matchesSearch = tractor.model.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          tractor.series.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesHP = selectedHP === "" || tractor.hp.includes(selectedHP);
-    const matchesSeries = selectedCategory === "" || tractor.series.includes(selectedCategory);
+    const matchesHP = !selectedHP || selectedHP === "all" || tractor.hp.includes(selectedHP);
+    const matchesSeries = !selectedCategory || selectedCategory === "all" || tractor.series.includes(selectedCategory);
     return matchesSearch && matchesHP && matchesSeries;
   });
 
@@ -262,8 +262,8 @@ const Tractors = () => {
                   <SelectTrigger className="w-full md:w-48">
                     <SelectValue placeholder="Select HP Range" />
                   </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="">All HP</SelectItem>
+                  <SelectContent className="z-50 bg-popover">
+                    <SelectItem value="all">All HP</SelectItem>
                     <SelectItem value="40">40 HP</SelectItem>
                     <SelectItem value="42">42 HP</SelectItem>
                     <SelectItem value="46">46 HP</SelectItem>
@@ -277,8 +277,8 @@ const Tractors = () => {
                   <SelectTrigger className="w-full md:w-48">
                     <SelectValue placeholder="Select Series" />
                   </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="">All Series</SelectItem>
+                  <SelectContent className="z-50 bg-popover">
+                    <SelectItem value="all">All Series</SelectItem>
                     <SelectItem value="Mahashakti">Mahashakti</SelectItem>
                     <SelectItem value="245">245 Series</SelectItem>
                     <SelectItem value="MaxPro">MaxPro</SelectItem>
@@ -387,9 +387,9 @@ const Tractors = () => {
                           size="sm" 
                           variant="outline" 
                           className="text-xs"
-                          onClick={() => handleWhatsApp(tractor)}
+                          onClick={() => { setSelectedTractor(tractor); setDetailsOpen(true); }}
                         >
-                          WhatsApp
+                          View Details
                         </Button>
                       </div>
                       
@@ -529,6 +529,13 @@ const Tractors = () => {
           </section>
         </main>
 
+        <TractorDetailsDialog 
+          open={detailsOpen} 
+          onOpenChange={setDetailsOpen} 
+          tractor={selectedTractor} 
+          onWhatsApp={handleWhatsApp}
+        />
+ 
         <Footer />
         <WhatsAppFloat />
       </div>

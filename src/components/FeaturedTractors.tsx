@@ -147,7 +147,7 @@ const FeaturedTractors = () => {
 
         {/* View All Button */}
         <div className="text-center">
-          <Button size="lg" variant="outline" className="px-8">
+          <Button size="lg" variant="outline" className="px-8" onClick={() => (window.location.href = '/tractors')}>
             View All Tractors
           </Button>
         </div>
