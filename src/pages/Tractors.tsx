@@ -122,24 +122,25 @@ const Tractors = () => {
     },
     {
       id: 6,
-      model: "DynaTrack Smart",
-      series: "DynaTrack Series",
-      hp: "55 HP",
-      transmission: "16F + 8R Powershuttle",
-      priceRange: "₹10.00 - 11.00 Lakhs",
+      model: "MF 5118 2WD",
+      series: "5100 Series",
+      hp: "20 HP",
+      transmission: "Sliding Mesh (6F + 2R)",
+      priceRange: "Contact for Price",
       image: "/placeholder.svg",
-      features: ["Smart Technology", "GPS Ready", "Precision Farming", "Advanced Dashboard"],
-      useCase: "Precision farming, Tech-enabled agriculture",
-      applications: ["Precision Farming", "Large Estates", "Modern Agriculture"],
+      features: ["Compact Design", "Fuel Efficient", "Easy Maintenance", "Orchard Friendly"],
+      useCase: "Orchard farming, Inter-cultivation, Small farms",
+      applications: ["Orchards", "Inter-cultivation", "Small Fields", "Vegetable Farming"],
       specifications: {
-        engine: "4-Cylinder, Common Rail",
-        displacement: "3600 cc",
-        fuelTank: "75 Litres",
-        hydraulics: "Electronic Control",
-        pto: "540/1000 RPM"
+        engine: "1-Cylinder, Water Cooled",
+        displacement: "825 cc",
+        fuelTank: "30 Litres",
+        hydraulics: "Open Center",
+        pto: "540 RPM",
+        liftingCapacity: "780 kg"
       },
-      seoDescription: "DynaTrack Smart - Advanced precision farming tractor with smart technology. Best GPS-ready tractor in India. Available at Doon Motors Uttarakhand.",
-      popular: true
+      seoDescription: "MF 5118 2WD - Compact 20 HP tractor perfect for orchards and inter-cultivation. Fuel-efficient Massey Ferguson tractor ideal for small farms. Contact Doon Motors for best price.",
+      popular: false
     }
   ];
 
@@ -156,7 +157,12 @@ const Tractors = () => {
   };
 
   const handleWhatsApp = (tractor: any) => {
-    const message = `Hi, I'm interested in ${tractor.model} (${tractor.hp}). Please share more details and pricing.`;
+    let message;
+    if (tractor.model === "MF 5118 2WD") {
+      message = `📩 Hi! I want details about MF 5118 2WD tractor. Please share specifications, pricing, and availability.`;
+    } else {
+      message = `Hi, I'm interested in ${tractor.model} (${tractor.hp}). Please share more details and pricing.`;
+    }
     window.open(`https://wa.me/917895327351?text=${encodeURIComponent(message)}`, '_blank');
   };
 
@@ -248,6 +254,7 @@ const Tractors = () => {
                     <SelectItem value="42">42 HP</SelectItem>
                     <SelectItem value="46">46 HP</SelectItem>
                     <SelectItem value="50">50 HP</SelectItem>
+                    <SelectItem value="20">20 HP</SelectItem>
                     <SelectItem value="55">55 HP</SelectItem>
                     <SelectItem value="60">60 HP</SelectItem>
                   </SelectContent>
@@ -261,7 +268,7 @@ const Tractors = () => {
                     <SelectItem value="Mahashakti">Mahashakti</SelectItem>
                     <SelectItem value="245">245 Series</SelectItem>
                     <SelectItem value="MaxPro">MaxPro</SelectItem>
-                    <SelectItem value="DynaTrack">DynaTrack</SelectItem>
+                    <SelectItem value="5100">5100 Series</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
