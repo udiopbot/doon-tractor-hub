@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -8,11 +8,15 @@ import { Phone, Mail, Search, Filter, MapPin, Star, Fuel, Settings, Wrench, Chev
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
+import TractorDetailsDialog from "@/components/TractorDetailsDialog";
+import mf5118Img from "@/assets/mf-5118-2wd.jpg";
 
 const Tractors = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedHP, setSelectedHP] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("");
+  const [detailsOpen, setDetailsOpen] = useState(false);
+  const [selectedTractor, setSelectedTractor] = useState<any | null>(null);
 
   const tractors = [
     {
@@ -125,23 +129,33 @@ const Tractors = () => {
       model: "MF 5118 2WD",
       series: "5100 Series",
       hp: "20 HP",
-      transmission: "Sliding Mesh (6F + 2R)",
+      transmission: "Sliding Mesh (8F + 2R)",
       priceRange: "Contact for Price",
-      image: "/placeholder.svg",
-      features: ["Compact Design", "Fuel Efficient", "Easy Maintenance", "Orchard Friendly"],
+      image: mf5118Img,
+      features: [
+        "20 HP category, compact and fuel efficient",
+        "1-cylinder engine, 825 cc displacement",
+        "Sliding mesh transmission",
+        "Lifting capacity up to 750 kg",
+        "Suitable for orchard and inter-cultivation"
+      ],
       useCase: "Orchard farming, Inter-cultivation, Small farms",
       applications: ["Orchards", "Inter-cultivation", "Small Fields", "Vegetable Farming"],
       specifications: {
-        engine: "1-Cylinder, Water Cooled",
+        engine: "1-Cylinder (182E15), Water Cooled",
         displacement: "825 cc",
-        fuelTank: "30 Litres",
-        hydraulics: "Open Center",
-        pto: "540 RPM",
-        liftingCapacity: "780 kg"
+        fuelTank: "28.5 Litres",
+        hydraulics: "Draft, Position & Response Control",
+        pto: "Live PTO, 540 / 540E",
+        liftingCapacity: "750 kgf",
+        clutch: "Single diaphragm",
+        steering: "Manual steering",
+        brakes: "Multi disc oil immersed",
+        electricals: "12V 75Ah Battery, 12V 35A Alternator"
       },
       seoDescription: "MF 5118 2WD - Compact 20 HP tractor perfect for orchards and inter-cultivation. Fuel-efficient Massey Ferguson tractor ideal for small farms. Contact Doon Motors for best price.",
       popular: false
-    }
+    },
   ];
 
   const filteredTractors = tractors.filter(tractor => {
