@@ -10,6 +10,10 @@ import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import TractorDetailsDialog from "@/components/TractorDetailsDialog";
 import mf5118Img from "@/assets/mf-5118-2wd.jpg";
+import mf1035DiImg from "@/assets/mf-1035-di.jpg";
+import mf245Di50Img from "@/assets/mf-245-di-50hp.jpg";
+import mf241DiImg from "@/assets/mf-241-di.jpg";
+import { tractorDatabase, dynaTrackDatabase } from "@/data/tractorDatabase";
 
 const Tractors = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -18,144 +22,97 @@ const Tractors = () => {
   const [detailsOpen, setDetailsOpen] = useState(false);
   const [selectedTractor, setSelectedTractor] = useState<any | null>(null);
 
+  // Convert database format to component format
+  const convertToComponentFormat = (dbTractor: any) => ({
+    id: dbTractor.id,
+    model: dbTractor.model,
+    series: dbTractor.series,
+    hp: dbTractor.hp,
+    transmission: dbTractor.officialSpecs.numberOfSpeeds,
+    priceRange: dbTractor.priceRange,
+    image: dbTractor.image === "/src/assets/mf-1035-di.jpg" ? mf1035DiImg :
+           dbTractor.image === "/src/assets/mf-245-di-50hp.jpg" ? mf245Di50Img :
+           dbTractor.image === "/src/assets/mf-241-di.jpg" ? mf241DiImg :
+           dbTractor.image === "/src/assets/mf-5118-2wd.jpg" ? mf5118Img :
+           "/placeholder.svg",
+    features: dbTractor.keyFeatures,
+    useCase: dbTractor.useCase,
+    applications: dbTractor.applications,
+    specifications: {
+      engine: dbTractor.officialSpecs.engine,
+      displacement: dbTractor.officialSpecs.cubicCapacity,
+      fuelTank: dbTractor.officialSpecs.fuelTankCapacity,
+      hydraulics: dbTractor.officialSpecs.hydraulicsLiftingCapacity,
+      pto: dbTractor.officialSpecs.ptoSpeed
+    },
+    seoDescription: dbTractor.seoDescription,
+    popular: dbTractor.popular,
+    officialSpecs: dbTractor.officialSpecs
+  });
+
+  // Combine all tractors including existing MF 5118 2WD
+  const mf5118Data = {
+    id: 6,
+    model: "MF 5118 2WD",
+    series: "5100 Series",
+    hp: "20 HP",
+    transmission: "Sliding Mesh (8F + 2R)",
+    priceRange: "Contact for Price",
+    image: mf5118Img,
+    features: [
+      "20 HP category, compact and fuel efficient",
+      "1-cylinder engine, 825 cc displacement",
+      "Sliding mesh transmission",
+      "Lifting capacity up to 750 kg",
+      "Suitable for orchard and inter-cultivation"
+    ],
+    useCase: "Orchard farming, Inter-cultivation, Small farms",
+    applications: ["Orchards", "Inter-cultivation", "Small Fields", "Vegetable Farming"],
+    specifications: {
+      engine: "1-Cylinder (182E15), Water Cooled",
+      displacement: "825 cc",
+      fuelTank: "28.5 Litres",
+      hydraulics: "Draft, Position & Response Control",
+      pto: "Live PTO, 540 / 540E",
+      liftingCapacity: "750 kgf",
+      clutch: "Single diaphragm",
+      steering: "Manual steering",
+      brakes: "Multi disc oil immersed",
+      electricals: "12V 75Ah Battery, 12V 35A Alternator"
+    },
+    seoDescription: "MF 5118 2WD - Compact 20 HP tractor perfect for orchards and inter-cultivation. Fuel-efficient Massey Ferguson tractor ideal for small farms. Contact Doon Motors for best price.",
+    popular: false,
+    officialSpecs: {
+      powerRange: "20 HP (14.71 kW)",
+      engine: "1-Cylinder (182E15), Water Cooled",
+      cylinders: 1,
+      cubicCapacity: "825 cc",
+      fuelInjectionPump: "Inline",
+      clutchType: "Single diaphragm",
+      transmissionType: "Sliding mesh",
+      numberOfSpeeds: "8 Forward + 2 Reverse",
+      tyreDimensions: "5.00 x 12 Front, 8.3 x 24 Rear",
+      forwardSpeed: "18.5 kmph",
+      ptoType: "Live PTO, 540 / 540E",
+      ptoSpeed: "540 / 540E RPM",
+      hydraulicsLiftingCapacity: "750 kgf",
+      threepointLinkage: "Draft, Position & Response Control",
+      brakeType: "Multi disc oil immersed",
+      steeringType: "Manual steering",
+      electricals: "12V 75Ah Battery, 12V 35A Alternator",
+      overallLength: "2650 mm",
+      overallWidth: "1200 mm",
+      overallHeight: "1950 mm",
+      wheelbase: "1450 mm",
+      totalWeight: "1100 kg",
+      fuelTankCapacity: "28.5 L"
+    }
+  };
+
   const tractors = [
-    {
-      id: 1,
-      model: "MF 1035 DI Mahashakti",
-      series: "Mahashakti Series",
-      hp: "40 HP",
-      transmission: "8F + 2R",
-      priceRange: "₹6.04 - 6.72 Lakhs",
-      image: "/placeholder.svg",
-      features: ["Fuel Efficient", "Easy Maintenance", "Multi-Speed PTO", "Power Steering"],
-      useCase: "Multi-crop farming, Small to medium farms",
-      applications: ["Rice Fields", "Wheat Fields", "Vegetable Farming"],
-      specifications: {
-        engine: "3-Cylinder, Water Cooled",
-        displacement: "2500 cc",
-        fuelTank: "55 Litres",
-        hydraulics: "Open Center",
-        pto: "540 RPM"
-      },
-      seoDescription: "MF 1035 DI Mahashakti - Best 40 HP tractor in Uttarakhand. Fuel-efficient Massey Ferguson tractor perfect for small to medium farms. Contact Doon Motors for best price.",
-      popular: true
-    },
-    {
-      id: 2,
-      model: "MF 245 DI - 46 HP",
-      series: "245 Series",
-      hp: "46 HP",
-      transmission: "8F + 2R Synchromesh",
-      priceRange: "₹7.50 - 8.20 Lakhs",
-      image: "/placeholder.svg",
-      features: ["Advanced Hydraulics", "Comfortable Cabin", "4WD Available", "Heavy Duty Axle"],
-      useCase: "Medium farming operations, Heavy implements",
-      applications: ["Cotton Fields", "Sugarcane", "Heavy Haulage"],
-      specifications: {
-        engine: "3-Cylinder, Turbocharged",
-        displacement: "2900 cc",
-        fuelTank: "65 Litres",
-        hydraulics: "Position & Draft Control",
-        pto: "540/1000 RPM"
-      },
-      seoDescription: "MF 245 DI 46 HP - Powerful Massey Ferguson tractor for heavy farming. Best cotton and sugarcane tractor in Dehradun. Contact for best deals.",
-      popular: false
-    },
-    {
-      id: 3,
-      model: "MF 245 DI - 50 HP",
-      series: "245 Series",
-      hp: "50 HP",
-      transmission: "12F + 3R Powershuttle",
-      priceRange: "₹8.20 - 9.00 Lakhs",
-      image: "/placeholder.svg",
-      features: ["Powershuttle Transmission", "Climate Control", "Advanced PTO", "Premium Comfort"],
-      useCase: "Large scale farming, Commercial operations",
-      applications: ["Large Fields", "Commercial Farming", "Multiple Implements"],
-      specifications: {
-        engine: "4-Cylinder, Turbocharged",
-        displacement: "3300 cc",
-        fuelTank: "70 Litres",
-        hydraulics: "Load Sensing",
-        pto: "540/1000 RPM"
-      },
-      seoDescription: "MF 245 DI 50 HP - Premium Massey Ferguson tractor for commercial farming. Best 4WD tractor under 60 HP in India. Available at Doon Motors Uttarakhand.",
-      popular: true
-    },
-    {
-      id: 4,
-      model: "MF 241 DI Maha Shakti",
-      series: "Maha Shakti Series",
-      hp: "42 HP",
-      transmission: "8F + 2R Sliding Mesh",
-      priceRange: "₹6.80 - 7.50 Lakhs",
-      image: "/placeholder.svg",
-      features: ["Mobile Charger", "Adjustable Seat", "Long Working Hours", "Cost Effective"],
-      useCase: "Small farms, Orchard farming",
-      applications: ["Orchards", "Vegetable Farming", "Small Fields"],
-      specifications: {
-        engine: "3-Cylinder, Direct Injection",
-        displacement: "2500 cc",
-        fuelTank: "55 Litres",
-        hydraulics: "Open Center",
-        pto: "540 RPM"
-      },
-      seoDescription: "MF 241 DI Maha Shakti - Best orchard tractor in India. Compact Massey Ferguson tractor ideal for small farms and orchards. Contact Doon Motors for price.",
-      popular: false
-    },
-    {
-      id: 5,
-      model: "MaxPro 6028",
-      series: "MaxPro Series",
-      hp: "60 HP",
-      transmission: "12F + 4R Synchromesh",
-      priceRange: "₹9.50 - 10.50 Lakhs",
-      image: "/placeholder.svg",
-      features: ["High Ground Clearance", "Heavy Duty", "Multiple PTO Options", "Superior Build Quality"],
-      useCase: "Heavy duty farming, Construction work",
-      applications: ["Rice Fields", "Construction", "Heavy Implements"],
-      specifications: {
-        engine: "4-Cylinder, Turbocharged",
-        displacement: "3800 cc",
-        fuelTank: "80 Litres",
-        hydraulics: "Dual Acting",
-        pto: "540/1000 RPM"
-      },
-      seoDescription: "MaxPro 6028 - Heavy duty 60 HP tractor perfect for rice fields and construction. Best Massey Ferguson tractor for heavy work in Uttarakhand.",
-      popular: false
-    },
-    {
-      id: 6,
-      model: "MF 5118 2WD",
-      series: "5100 Series",
-      hp: "20 HP",
-      transmission: "Sliding Mesh (8F + 2R)",
-      priceRange: "Contact for Price",
-      image: mf5118Img,
-      features: [
-        "20 HP category, compact and fuel efficient",
-        "1-cylinder engine, 825 cc displacement",
-        "Sliding mesh transmission",
-        "Lifting capacity up to 750 kg",
-        "Suitable for orchard and inter-cultivation"
-      ],
-      useCase: "Orchard farming, Inter-cultivation, Small farms",
-      applications: ["Orchards", "Inter-cultivation", "Small Fields", "Vegetable Farming"],
-      specifications: {
-        engine: "1-Cylinder (182E15), Water Cooled",
-        displacement: "825 cc",
-        fuelTank: "28.5 Litres",
-        hydraulics: "Draft, Position & Response Control",
-        pto: "Live PTO, 540 / 540E",
-        liftingCapacity: "750 kgf",
-        clutch: "Single diaphragm",
-        steering: "Manual steering",
-        brakes: "Multi disc oil immersed",
-        electricals: "12V 75Ah Battery, 12V 35A Alternator"
-      },
-      seoDescription: "MF 5118 2WD - Compact 20 HP tractor perfect for orchards and inter-cultivation. Fuel-efficient Massey Ferguson tractor ideal for small farms. Contact Doon Motors for best price.",
-      popular: false
-    },
+    ...tractorDatabase.map(convertToComponentFormat),
+    ...dynaTrackDatabase.map(convertToComponentFormat),
+    mf5118Data
   ];
 
   const filteredTractors = tractors.filter(tractor => {
@@ -190,8 +147,8 @@ const Tractors = () => {
     <>
       {/* SEO Meta Tags */}
       <title>Massey Ferguson Tractors in Uttarakhand | Doon Motors & Tractors</title>
-      <meta name="description" content="Authorized Massey Ferguson & DynaTrack dealer in Uttarakhand. Best prices on MF 1035 DI, 245 DI, MaxPro tractors. 15+ years experience. Contact +91 78953 27351" />
-      <meta name="keywords" content="Massey Ferguson tractors Uttarakhand, TAFE tractors Dehradun, MF 1035 price, 245 DI tractor, DynaTrack Smart, best tractor dealer Uttarakhand" />
+      <meta name="description" content="Authorized Massey Ferguson & DynaTrack dealer in Uttarakhand. 20+ models including MF 1035 DI, 245 DI, 241 PD, DynaTrack Smart. Best prices & service. Contact +91 78953 27351" />
+      <meta name="keywords" content="Massey Ferguson tractors Uttarakhand, TAFE tractors Dehradun, MF 1035 DI price, MF 245 DI, MF 241 PD, DynaTrack Smart, orchard tractors, 4WD tractors, best tractor dealer Uttarakhand" />
       <meta property="og:title" content="Best Massey Ferguson Tractors in Uttarakhand | Doon Motors" />
       <meta property="og:description" content="Authorized dealer for Massey Ferguson & DynaTrack tractors. Expert service, best prices, 15+ years experience in Uttarakhand." />
       <meta name="robots" content="index, follow" />
@@ -238,7 +195,7 @@ const Tractors = () => {
                   <div className="text-sm text-muted-foreground">Service Support</div>
                 </div>
                 <div className="bg-white/50 dark:bg-black/20 rounded-lg p-4">
-                  <div className="text-2xl font-bold text-primary">6+</div>
+                  <div className="text-2xl font-bold text-primary">20+</div>
                   <div className="text-sm text-muted-foreground">Tractor Models</div>
                 </div>
               </div>
@@ -264,11 +221,17 @@ const Tractors = () => {
                   </SelectTrigger>
                   <SelectContent className="z-50 bg-popover">
                     <SelectItem value="all">All HP</SelectItem>
+                    <SelectItem value="20">20 HP</SelectItem>
+                    <SelectItem value="30">30 HP</SelectItem>
+                    <SelectItem value="35">35 HP</SelectItem>
+                    <SelectItem value="36">36 HP</SelectItem>
+                    <SelectItem value="37">37 HP</SelectItem>
+                    <SelectItem value="38">38 HP</SelectItem>
                     <SelectItem value="40">40 HP</SelectItem>
                     <SelectItem value="42">42 HP</SelectItem>
                     <SelectItem value="46">46 HP</SelectItem>
+                    <SelectItem value="48">48 HP</SelectItem>
                     <SelectItem value="50">50 HP</SelectItem>
-                    <SelectItem value="20">20 HP</SelectItem>
                     <SelectItem value="55">55 HP</SelectItem>
                     <SelectItem value="60">60 HP</SelectItem>
                   </SelectContent>
@@ -279,10 +242,18 @@ const Tractors = () => {
                   </SelectTrigger>
                   <SelectContent className="z-50 bg-popover">
                     <SelectItem value="all">All Series</SelectItem>
-                    <SelectItem value="Mahashakti">Mahashakti</SelectItem>
+                    <SelectItem value="1035">1035 Series</SelectItem>
+                    <SelectItem value="Mahashakti">Mahashakti Series</SelectItem>
+                    <SelectItem value="Dost">Dost Series</SelectItem>
+                    <SelectItem value="Super Plus">Super Plus Series</SelectItem>
+                    <SelectItem value="R Series">R Series</SelectItem>
                     <SelectItem value="245">245 Series</SelectItem>
-                    <SelectItem value="MaxPro">MaxPro</SelectItem>
+                    <SelectItem value="241">241 Series</SelectItem>
+                    <SelectItem value="Orchard">Orchard Series</SelectItem>
+                    <SelectItem value="DynaTrack">DynaTrack Series</SelectItem>
+                    <SelectItem value="Heritage">Heritage Series</SelectItem>
                     <SelectItem value="5100">5100 Series</SelectItem>
+                    <SelectItem value="MaxPro">MaxPro Series</SelectItem>
                   </SelectContent>
                 </Select>
               </div>

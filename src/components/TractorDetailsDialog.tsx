@@ -116,17 +116,19 @@ const TractorDetailsDialog: React.FC<TractorDetailsDialogProps> = ({ open, onOpe
             <div>
               <h3 className="text-sm font-semibold text-foreground mb-2">Specifications</h3>
               <div className="rounded-lg border p-4">
+                <TitleValue label="Power Range" value={tractor.officialSpecs?.powerRange || tractor.hp} />
                 <TitleValue label="Engine" value={tractor.specifications?.engine} />
                 <TitleValue label="Displacement" value={tractor.specifications?.displacement} />
-                <TitleValue label="Clutch" value={tractor.specifications?.clutch} />
-                <TitleValue label="Transmission" value={tractor.transmission || tractor.specifications?.transmission} />
-                <TitleValue label="PTO" value={tractor.specifications?.pto} />
-                <TitleValue label="Hydraulics" value={tractor.specifications?.hydraulics} />
-                <TitleValue label="Lifting Capacity" value={tractor.specifications?.liftingCapacity} />
+                <TitleValue label="Cylinders" value={tractor.officialSpecs?.cylinders} />
+                <TitleValue label="Clutch Type" value={tractor.officialSpecs?.clutchType || tractor.specifications?.clutch} />
+                <TitleValue label="Transmission" value={tractor.officialSpecs?.transmissionType || tractor.transmission} />
+                <TitleValue label="PTO Speed" value={tractor.specifications?.pto} />
+                <TitleValue label="Hydraulic Capacity" value={tractor.specifications?.hydraulics} />
                 <TitleValue label="Fuel Tank" value={tractor.specifications?.fuelTank} />
-                <TitleValue label="Steering" value={tractor.specifications?.steering} />
-                <TitleValue label="Brakes" value={tractor.specifications?.brakes} />
-                <TitleValue label="Electricals" value={tractor.specifications?.electricals} />
+                <TitleValue label="Max Speed" value={tractor.officialSpecs?.forwardSpeed} />
+                <TitleValue label="Weight" value={tractor.officialSpecs?.totalWeight} />
+                <TitleValue label="Steering" value={tractor.officialSpecs?.steeringType || tractor.specifications?.steering} />
+                <TitleValue label="Brakes" value={tractor.officialSpecs?.brakeType || tractor.specifications?.brakes} />
               </div>
             </div>
 
