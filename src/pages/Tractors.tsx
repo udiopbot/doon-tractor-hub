@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Phone, Mail, Search, Filter, MapPin, Star, Fuel, Settings, Wrench, ChevronRight } from "lucide-react";
+import { Phone, Mail, Search, Filter, MapPin, Star, Fuel, Settings, Wrench, ChevronRight, Eye } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
@@ -358,8 +358,12 @@ const Tractors = () => {
                           size="sm" 
                           variant="outline" 
                           className="text-xs"
-                          onClick={() => { setSelectedTractor(tractor); setDetailsOpen(true); }}
+                          onClick={() => {
+                            const encodedModel = encodeURIComponent(tractor.model.toLowerCase().replace(/\s+/g, '-'));
+                            window.location.href = `/tractors/${encodedModel}`;
+                          }}
                         >
+                          <Eye className="mr-1 h-3 w-3" />
                           View Details
                         </Button>
                       </div>

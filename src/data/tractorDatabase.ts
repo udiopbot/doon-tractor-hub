@@ -706,4 +706,6 @@ export const dynaTrackDatabase: TractorData[] = [
   }
 ];
 
+export { tractorDatabase as tractors };
+
 // Additional models will be added as we fetch more data from the official website

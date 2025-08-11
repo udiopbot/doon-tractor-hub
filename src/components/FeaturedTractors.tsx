@@ -123,7 +123,10 @@ const FeaturedTractors = () => {
                       size="sm" 
                       variant="outline" 
                       className="text-xs"
-                      onClick={() => window.open('https://wa.me/917895327351', '_blank')}
+                      onClick={() => {
+                        const encodedModel = encodeURIComponent(tractor.series.toLowerCase().replace(/\s+/g, '-'));
+                        window.location.href = `/tractors/${encodedModel}`;
+                      }}
                     >
                       <Eye className="mr-1 h-3 w-3" />
                       View Details
