@@ -17,6 +17,7 @@ export type TractorSpec = {
   applications?: string[];
   specifications?: Record<string, string>;
   brochureUrl?: string | null;
+  officialSpecs?: Record<string, string>;
 };
 
 interface TractorDetailsDialogProps {
