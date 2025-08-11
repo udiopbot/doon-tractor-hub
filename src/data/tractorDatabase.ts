@@ -104,36 +104,36 @@ export const tractorDatabase: TractorData[] = [
     priceRange: "₹6.04 - 6.72 Lakhs",
     image: "/placeholder.svg", // Will be updated with actual image
     officialSpecs: {
-      powerRange: "40 HP (29.42 kW)",
-      engine: "SIMPSONS S324 TIII A",
+      powerRange: "40 HP (27.6 kW)",
+      engine: "SIMPSONS S337 T III A",
       cylinders: 3,
-      cubicCapacity: "2500 cc (2.50L)",
+      cubicCapacity: "2400 cc (2.40L)",
       fuelInjectionPump: "Inline",
-      clutchType: "Single",
-      transmissionType: "Sliding mesh",
+      clutchType: "Dual Clutch",
+      transmissionType: "Sliding Mesh",
       numberOfSpeeds: "8 Forward + 2 Reverse",
-      tyreDimensions: "6.00 x 16 Front, 13.6 x 28 Rear",
-      forwardSpeed: "25.2 kmph",
-      ptoType: "Live, Single-speed PTO",
-      ptoSpeed: "540 RPM @ 1650 ERPM",
-      hydraulicsLiftingCapacity: "1200 kgf",
-      threepointLinkage: "Draft, position and response control",
-      brakeType: "Dry disc brakes",
-      steeringType: "Manual steering",
+      tyreDimensions: "6 x 16 Front, 13.6 x 28 Rear",
+      forwardSpeed: "30.36 Km/h @ 2000 RPM",
+      ptoType: "Live PTO, Six-splined shaft",
+      ptoSpeed: "540 RPM @ 1500 ERPM",
+      hydraulicsLiftingCapacity: "1300 kgf",
+      threepointLinkage: "Draft, position and response control. Links fitted with CAT-1 (Combi Ball)",
+      brakeType: "Dry Brake",
+      steeringType: "Manual Steering",
       electricals: "12 V 75 Ah Battery, 12 V 36 A Alternator",
-      overallLength: "3120 mm",
-      overallWidth: "1675 mm",
-      overallHeight: "2185 mm",
-      wheelbase: "1830 mm",
-      totalWeight: "1750 kg",
-      fuelTankCapacity: "55 L"
+      overallLength: "3340 mm",
+      overallWidth: "1715 mm",
+      overallHeight: "2200 mm",
+      wheelbase: "1785 mm",
+      totalWeight: "1745 kg",
+      fuelTankCapacity: "47 L"
     },
     keyFeatures: [
-      "Fuel Efficient engine",
-      "Easy Maintenance",
-      "Multi-Speed PTO",
-      "Power Steering available",
-      "Mahashakti series reliability"
+      "Transport lock valve",
+      "Classic pedal",
+      "Instrument Cluster",
+      "Thicker steering wheel",
+      "External check chain (Chain stablizer)"
     ],
     applications: ["Rice Fields", "Wheat Fields", "Vegetable Farming", "Multi-crop farming"],
     useCase: "Multi-crop farming, Small to medium farms",
@@ -279,7 +279,7 @@ export const tractorDatabase: TractorData[] = [
     popular: false
   },
 
-  // 245 Series
+  // 245 Series - Official Massey Ferguson India specifications
   {
     id: 201,
     model: "MF 245 DI - 50 HP",
@@ -409,11 +409,11 @@ export const tractorDatabase: TractorData[] = [
       features: "Chain Stabiliser, Check chain, Front Bumper, 7 pin Trailer Socket"
     },
     keyFeatures: [
-      "Mobile Charger",
-      "Adjustable Seat",
-      "Long Working Hours",
-      "Cost Effective",
-      "Chain stabilizer"
+      "Chain Stabiliser",
+      "Check chain",
+      "Front Bumper",
+      "7 pin Trailer Socket",
+      "Sealed Dry Disc Brakes"
     ],
     applications: ["Orchards", "Vegetable Farming", "Small Fields", "General agriculture"],
     useCase: "Small farms, Orchard farming",
