@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -16,6 +17,7 @@ import mf241DiImg from "@/assets/mf-241-di.jpg";
 import { tractorDatabase, dynaTrackDatabase } from "@/data/tractorDatabase";
 
 const Tractors = () => {
+  const navigate = useNavigate();
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedHP, setSelectedHP] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("");
@@ -360,7 +362,7 @@ const Tractors = () => {
                           className="text-xs"
                           onClick={() => {
                             const encodedModel = encodeURIComponent(tractor.model.toLowerCase().replace(/\s+/g, '-'));
-                            window.location.href = `/tractors/${encodedModel}`;
+                            navigate(`/tractors/${encodedModel}`);
                           }}
                         >
                           <Eye className="mr-1 h-3 w-3" />

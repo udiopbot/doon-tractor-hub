@@ -2,8 +2,10 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Phone, Download, Eye } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const FeaturedTractors = () => {
+  const navigate = useNavigate();
   const tractors = [
     {
       id: 1,
@@ -125,7 +127,7 @@ const FeaturedTractors = () => {
                       className="text-xs"
                       onClick={() => {
                         const encodedModel = encodeURIComponent(tractor.series.toLowerCase().replace(/\s+/g, '-'));
-                        window.location.href = `/tractors/${encodedModel}`;
+                        navigate(`/tractors/${encodedModel}`);
                       }}
                     >
                       <Eye className="mr-1 h-3 w-3" />
@@ -150,7 +152,7 @@ const FeaturedTractors = () => {
 
         {/* View All Button */}
         <div className="text-center">
-          <Button size="lg" variant="outline" className="px-8" onClick={() => (window.location.href = '/tractors')}>
+          <Button size="lg" variant="outline" className="px-8" onClick={() => navigate('/tractors')}>
             View All Tractors
           </Button>
         </div>
