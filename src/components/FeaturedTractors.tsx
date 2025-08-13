@@ -119,7 +119,7 @@ const FeaturedTractors = () => {
                       onClick={() => window.open('tel:+917895327351')}
                     >
                       <Phone className="mr-1 h-3 w-3" />
-                      Get Quote
+                      Call Us
                     </Button>
                     <Button 
                       size="sm" 
