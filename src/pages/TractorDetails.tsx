@@ -19,10 +19,16 @@ const TractorDetails = () => {
   useEffect(() => {
     if (model) {
       const decodedModel = decodeURIComponent(model);
-      const foundTractor = tractors.find(t => 
-        t.model.toLowerCase().replace(/\s+/g, '-') === decodedModel.toLowerCase() ||
-        t.model === decodedModel
-      );
+      
+      const foundTractor = tractors.find(t => {
+        const normalizedTractorModel = t.model.toLowerCase().replace(/\s+/g, '-');
+        const normalizedSearchModel = decodedModel.toLowerCase();
+        
+        return normalizedTractorModel === normalizedSearchModel ||
+               t.model.toLowerCase() === normalizedSearchModel ||
+               t.model === decodedModel;
+      });
+      
       setTractor(foundTractor || null);
     }
   }, [model]);

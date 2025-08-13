@@ -1,6 +1,13 @@
 // Comprehensive Massey Ferguson Tractor Database
 // Data sourced from official Massey Ferguson India website
 
+// Import tractor images
+import mf1035Di from "@/assets/mf-1035-di.jpg";
+import mf241Di from "@/assets/mf-241-di.jpg";
+import mf245Di from "@/assets/mf-245-di-50hp.jpg";
+import mf5118 from "@/assets/mf-5118-2wd.jpg";
+import heroTractor from "@/assets/hero-tractor.jpg";
+
 export interface TractorSpecs {
   powerRange: string;
   engine: string;
@@ -54,7 +61,7 @@ export const tractorDatabase: TractorData[] = [
     hp: "36 HP",
     category: "Tractor",
     priceRange: "Contact for Price",
-    image: "/src/assets/mf-1035-di.jpg",
+    image: mf1035Di,
     officialSpecs: {
       powerRange: "36 HP (26.47 kW)",
       engine: "SIMPSONS S324 TIII A",
@@ -102,7 +109,7 @@ export const tractorDatabase: TractorData[] = [
     hp: "40 HP",
     category: "Tractor",
     priceRange: "₹6.04 - 6.72 Lakhs",
-    image: "/placeholder.svg", // Will be updated with actual image
+    image: mf1035Di,
     officialSpecs: {
       powerRange: "40 HP (27.6 kW)",
       engine: "SIMPSONS S337 T III A",
@@ -148,7 +155,7 @@ export const tractorDatabase: TractorData[] = [
     hp: "35 HP",
     category: "Tractor",
     priceRange: "Contact for Price",
-    image: "/placeholder.svg",
+    image: mf1035Di,
     officialSpecs: {
       powerRange: "35 HP (25.73 kW)",
       engine: "SIMPSONS S324 TIII A",
@@ -194,7 +201,7 @@ export const tractorDatabase: TractorData[] = [
     hp: "38 HP",
     category: "Tractor",
     priceRange: "Contact for Price",
-    image: "/placeholder.svg",
+    image: mf1035Di,
     officialSpecs: {
       powerRange: "38 HP (27.94 kW)",
       engine: "SIMPSONS S324 TIII A Enhanced",
@@ -240,7 +247,7 @@ export const tractorDatabase: TractorData[] = [
     hp: "37 HP",
     category: "Tractor",
     priceRange: "Contact for Price",
-    image: "/placeholder.svg",
+    image: mf1035Di,
     officialSpecs: {
       powerRange: "37 HP (27.20 kW)",
       engine: "SIMPSONS S324 TIII A",
@@ -287,7 +294,7 @@ export const tractorDatabase: TractorData[] = [
     hp: "50 HP",
     category: "Tractor",
     priceRange: "₹8.20 - 9.00 Lakhs",
-    image: "/src/assets/mf-245-di-50hp.jpg",
+    image: mf245Di,
     officialSpecs: {
       powerRange: "50 HP (36.76 kW)",
       engine: "SIMPSONS SJ327 Engine TIII A",
@@ -334,7 +341,7 @@ export const tractorDatabase: TractorData[] = [
     hp: "46 HP",
     category: "Tractor",
     priceRange: "₹7.50 - 8.20 Lakhs",
-    image: "/placeholder.svg",
+    image: mf245Di,
     officialSpecs: {
       powerRange: "46 HP (33.82 kW)",
       engine: "SIMPSONS SJ327 Engine TIII A",
@@ -381,7 +388,7 @@ export const tractorDatabase: TractorData[] = [
     hp: "42 HP",
     category: "Tractor",
     priceRange: "₹6.80 - 7.50 Lakhs",
-    image: "/src/assets/mf-241-di.jpg",
+    image: mf241Di,
     officialSpecs: {
       powerRange: "31.33 kW (42 hp range)",
       engine: "SIMPSONS S324 TIII A",
@@ -428,7 +435,7 @@ export const tractorDatabase: TractorData[] = [
     hp: "42 HP",
     category: "Tractor",
     priceRange: "₹8.50 - 9.20 Lakhs",
-    image: "/placeholder.svg",
+    image: mf241Di,
     officialSpecs: {
       powerRange: "31.33 kW (42 hp range)",
       engine: "SIMPSONS S324 TIII A",
@@ -475,7 +482,7 @@ export const tractorDatabase: TractorData[] = [
     hp: "42 HP",
     category: "Tractor",
     priceRange: "Contact for Price",
-    image: "/placeholder.svg",
+    image: mf241Di,
     officialSpecs: {
       powerRange: "31.33 kW (42 hp range)",
       engine: "SIMPSONS S324 TIII A",
@@ -521,7 +528,7 @@ export const tractorDatabase: TractorData[] = [
     hp: "42 HP",
     category: "Tractor",
     priceRange: "₹7.20 - 7.80 Lakhs",
-    image: "/placeholder.svg",
+    image: mf241Di,
     officialSpecs: {
       powerRange: "31.33 kW (42 hp range)",
       engine: "SIMPSONS S324 TIII A",
@@ -568,7 +575,7 @@ export const tractorDatabase: TractorData[] = [
     hp: "30 HP",
     category: "Tractor",
     priceRange: "Contact for Price",
-    image: "/placeholder.svg",
+    image: heroTractor,
     officialSpecs: {
       powerRange: "30 HP (22.06 kW)",
       engine: "SIMPSONS S318 TIII A",
@@ -618,7 +625,7 @@ export const dynaTrackDatabase: TractorData[] = [
     hp: "50 HP",
     category: "DynaTrack",
     priceRange: "Contact for Price",
-    image: "/placeholder.svg",
+    image: heroTractor,
     officialSpecs: {
       powerRange: "50 HP (36.76 kW)",
       engine: "Advanced DynaTrack Engine",
@@ -665,7 +672,7 @@ export const dynaTrackDatabase: TractorData[] = [
     hp: "48 HP",
     category: "DynaTrack",
     priceRange: "Contact for Price",
-    image: "/placeholder.svg",
+    image: heroTractor,
     officialSpecs: {
       powerRange: "48 HP (35.28 kW)",
       engine: "Heritage DynaTrack Engine",
