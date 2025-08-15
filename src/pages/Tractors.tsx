@@ -9,11 +9,6 @@ import { Phone, Mail, Search, Filter, MapPin, Star, Fuel, Settings, Wrench, Chev
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
-import TractorDetailsDialog from "@/components/TractorDetailsDialog";
-import mf5118Img from "@/assets/mf-5118-2wd.jpg";
-import mf1035DiImg from "@/assets/mf-1035-di.jpg";
-import mf245Di50Img from "@/assets/mf-245-di-50hp.jpg";
-import mf241DiImg from "@/assets/mf-241-di.jpg";
 import { tractorDatabase, dynaTrackDatabase } from "@/data/tractorDatabase";
 
 const Tractors = () => {
@@ -21,8 +16,6 @@ const Tractors = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedHP, setSelectedHP] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("");
-  const [detailsOpen, setDetailsOpen] = useState(false);
-  const [selectedTractor, setSelectedTractor] = useState<any | null>(null);
 
   // Convert database format to component format
   const convertToComponentFormat = (dbTractor: any) => ({
@@ -32,11 +25,7 @@ const Tractors = () => {
     hp: dbTractor.hp,
     transmission: dbTractor.officialSpecs.numberOfSpeeds,
     priceRange: dbTractor.priceRange,
-    image: dbTractor.image === "/src/assets/mf-1035-di.jpg" ? mf1035DiImg :
-           dbTractor.image === "/src/assets/mf-245-di-50hp.jpg" ? mf245Di50Img :
-           dbTractor.image === "/src/assets/mf-241-di.jpg" ? mf241DiImg :
-           dbTractor.image === "/src/assets/mf-5118-2wd.jpg" ? mf5118Img :
-           "/placeholder.svg",
+    image: dbTractor.image, // Use the imported image directly from database
     features: dbTractor.keyFeatures,
     useCase: dbTractor.useCase,
     applications: dbTractor.applications,
@@ -52,7 +41,7 @@ const Tractors = () => {
     officialSpecs: dbTractor.officialSpecs
   });
 
-  // Combine all tractors including existing MF 5118 2WD
+  // Additional MF 5118 2WD data (kept separate for now)
   const mf5118Data = {
     id: 6,
     model: "MF 5118 2WD",
@@ -60,7 +49,7 @@ const Tractors = () => {
     hp: "20 HP",
     transmission: "Sliding Mesh (8F + 2R)",
     priceRange: "Contact for Price",
-    image: mf5118Img,
+    image: "/src/assets/mf-5118-2wd.jpg",
     features: [
       "20 HP category, compact and fuel efficient",
       "1-cylinder engine, 825 cc displacement",
@@ -506,12 +495,6 @@ const Tractors = () => {
           </section>
         </main>
 
-        <TractorDetailsDialog 
-          open={detailsOpen} 
-          onOpenChange={setDetailsOpen} 
-          tractor={selectedTractor} 
-          onWhatsApp={handleWhatsApp}
-        />
  
         <Footer />
         <WhatsAppFloat />

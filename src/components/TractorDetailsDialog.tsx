@@ -1,9 +1,8 @@
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { Badge } from "@/components/ui/badge";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { Download, Phone, MessageCircle } from "lucide-react";
-import React from "react";
+import { Badge } from "@/components/ui/badge";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { Phone, MessageCircle } from "lucide-react";
 
 export type TractorSpec = {
   id?: number;
@@ -27,7 +26,7 @@ interface TractorDetailsDialogProps {
   onWhatsApp?: (tractor: TractorSpec) => void;
 }
 
-const TitleValue: React.FC<{ label: string; value?: string }> = ({ label, value }) => {
+const TitleValue: React.FC<{ label: string; value?: string | number }> = ({ label, value }) => {
   if (!value) return null;
   return (
     <div className="grid grid-cols-2 gap-2 text-sm py-1">
@@ -41,20 +40,9 @@ const TractorDetailsDialog: React.FC<TractorDetailsDialogProps> = ({ open, onOpe
   if (!tractor) return null;
 
   const whatsappHandler = () => {
+    const message = `Hi, I'm interested in ${tractor.model} (${tractor.hp || tractor.specifications?.hp}). Please share more details and pricing.`;
+    window.open(`https://wa.me/917895327351?text=${encodeURIComponent(message)}`, '_blank');
     if (onWhatsApp) onWhatsApp(tractor);
-  };
-
-  const brochureClick = () => {
-    if (tractor.brochureUrl) {
-      window.open(tractor.brochureUrl, "_blank");
-    } else {
-      const subject = `Brochure Request for ${tractor.model}`;
-      window.open(
-        `mailto:doonmotors.tractortafe@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
-          "Hi, please share the official brochure for " + tractor.model
-        )}`
-      );
-    }
   };
 
   return (
@@ -68,7 +56,9 @@ const TractorDetailsDialog: React.FC<TractorDetailsDialogProps> = ({ open, onOpe
             )}
           </DialogTitle>
           {tractor.series && (
-            <div className="px-1 text-sm text-muted-foreground">{tractor.series}</div>
+            <DialogDescription className="text-sm text-muted-foreground">
+              {tractor.series}
+            </DialogDescription>
           )}
         </DialogHeader>
 
@@ -134,10 +124,6 @@ const TractorDetailsDialog: React.FC<TractorDetailsDialogProps> = ({ open, onOpe
             </div>
 
             <div className="flex flex-col sm:flex-row gap-2">
-              <Button className="flex-1" onClick={brochureClick} variant="secondary">
-                <Download className="mr-2 h-4 w-4" />
-                {tractor.brochureUrl ? "Download Brochure" : "Request Brochure via Email"}
-              </Button>
               <Button className="flex-1" variant="outline" onClick={() => window.open('tel:+917895327351')}>
                 <Phone className="mr-2 h-4 w-4" />
                 Call Dealer
