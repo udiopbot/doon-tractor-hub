@@ -9,6 +9,16 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 
+// Import implement images
+import loaderImage from "@/assets/mf-loader.jpg";
+import seederImage from "@/assets/super-seeder.jpg";
+import tillerImage from "@/assets/rotary-tiller.jpg";
+import harrowImage from "@/assets/disc-harrow.jpg";
+import trailerImage from "@/assets/hydraulic-trailer.jpg";
+import cultivatorImage from "@/assets/cultivator.jpg";
+import thresherImage from "@/assets/thresher.jpg";
+import planterImage from "@/assets/potato-planter.jpg";
+
 const Implements = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("");
@@ -20,7 +30,7 @@ const Implements = () => {
       name: "MF 241 DynaTrack Loader",
       category: "Loaders",
       compatibility: "40-50 HP Tractors",
-      image: "/placeholder.svg",
+      image: loaderImage,
       features: ["Hydraulic Control", "High Lifting Capacity", "Easy Attachment", "Durable Build"],
       applications: ["Material Handling", "Construction Work", "Farm Loading"],
       specifications: {
@@ -29,7 +39,7 @@ const Implements = () => {
         bucketCapacity: "0.5 cubic meters",
         weight: "450 kg"
       },
-      priceRange: "₹1.80 - 2.20 Lakhs",
+      priceRange: "Contact for Price",
       description: "Heavy-duty front-end loader perfect for material handling and construction work on farms.",
       popular: true
     },
@@ -38,7 +48,7 @@ const Implements = () => {
       name: "Super Seeder",
       category: "Seeders",
       compatibility: "45-65 HP Tractors",
-      image: "/placeholder.svg",
+      image: seederImage,
       features: ["Zero Tillage", "Seed & Fertilizer", "Adjustable Depth", "Multiple Crop Support"],
       applications: ["Direct Seeding", "Zero Tillage Farming", "Wheat Seeding"],
       specifications: {
@@ -47,7 +57,7 @@ const Implements = () => {
         furrowOpeners: "25 nos",
         weight: "680 kg"
       },
-      priceRange: "₹3.50 - 4.20 Lakhs",
+      priceRange: "Contact for Price",
       description: "Advanced seeder for zero-tillage farming, perfect for wheat and other crop direct seeding.",
       popular: true
     },
@@ -56,7 +66,7 @@ const Implements = () => {
       name: "Rotary Tiller",
       category: "Tillers",
       compatibility: "35-55 HP Tractors",
-      image: "/placeholder.svg",
+      image: tillerImage,
       features: ["Heavy Duty Gearbox", "Adjustable Depth", "Side Drive", "Replaceable Blades"],
       applications: ["Land Preparation", "Seedbed Preparation", "Stubble Management"],
       specifications: {
@@ -65,7 +75,7 @@ const Implements = () => {
         gearboxType: "Side Drive",
         weight: "420 kg"
       },
-      priceRange: "₹1.50 - 1.85 Lakhs",
+      priceRange: "Contact for Price",
       description: "Robust rotary tiller for effective land preparation and seedbed preparation.",
       popular: false
     },
@@ -74,7 +84,7 @@ const Implements = () => {
       name: "Disc Harrow",
       category: "Harrows",
       compatibility: "50-75 HP Tractors",
-      image: "/placeholder.svg",
+      image: harrowImage,
       features: ["Heat Treated Discs", "Heavy Frame", "Grease Nipples", "Adjustable Angle"],
       applications: ["Primary Tillage", "Stubble Breaking", "Soil Mixing"],
       specifications: {
@@ -83,7 +93,7 @@ const Implements = () => {
         discSize: "22 inch",
         weight: "850 kg"
       },
-      priceRange: "₹2.80 - 3.40 Lakhs",
+      priceRange: "Contact for Price",
       description: "Heavy-duty disc harrow for primary tillage and effective stubble management.",
       popular: false
     },
@@ -92,7 +102,7 @@ const Implements = () => {
       name: "Hydraulic Trailer",
       category: "Trailers",
       compatibility: "40-80 HP Tractors",
-      image: "/placeholder.svg",
+      image: trailerImage,
       features: ["Hydraulic Tipping", "High Load Capacity", "Steel Body", "Four Wheel Design"],
       applications: ["Cargo Transport", "Farm Produce", "Construction Material"],
       specifications: {
@@ -101,7 +111,7 @@ const Implements = () => {
         tyreSize: "7.50-16",
         weight: "1200 kg"
       },
-      priceRange: "₹2.20 - 2.80 Lakhs",
+      priceRange: "Contact for Price",
       description: "Hydraulic tipping trailer with high load capacity for efficient farm transportation.",
       popular: true
     },
@@ -110,7 +120,7 @@ const Implements = () => {
       name: "Cultivator",
       category: "Cultivators",
       compatibility: "35-60 HP Tractors",
-      image: "/placeholder.svg",
+      image: cultivatorImage,
       features: ["Spring Loaded Tines", "Adjustable Depth", "Compact Design", "Easy Maintenance"],
       applications: ["Secondary Tillage", "Weed Control", "Soil Aeration"],
       specifications: {
@@ -119,7 +129,7 @@ const Implements = () => {
         workingDepth: "15-25 cm",
         weight: "380 kg"
       },
-      priceRange: "₹95,000 - 1.25 Lakhs",
+      priceRange: "Contact for Price",
       description: "Efficient cultivator for secondary tillage operations and effective weed control.",
       popular: false
     },
@@ -128,7 +138,7 @@ const Implements = () => {
       name: "Thresher",
       category: "Threshers",
       compatibility: "45-65 HP Tractors",
-      image: "/placeholder.svg",
+      image: thresherImage,
       features: ["High Capacity", "Clean Output", "Low Grain Damage", "Easy Operation"],
       applications: ["Wheat Threshing", "Rice Threshing", "Grain Separation"],
       specifications: {
@@ -137,7 +147,7 @@ const Implements = () => {
         cleaningSystem: "Double Fan",
         weight: "1800 kg"
       },
-      priceRange: "₹4.50 - 5.50 Lakhs",
+      priceRange: "Contact for Price",
       description: "High-capacity thresher for efficient grain separation with minimal damage.",
       popular: true
     },
@@ -146,7 +156,7 @@ const Implements = () => {
       name: "Potato Planter",
       category: "Planters",
       compatibility: "40-55 HP Tractors",
-      image: "/placeholder.svg",
+      image: planterImage,
       features: ["Precise Spacing", "Fertilizer Unit", "Ridger Attachment", "Adjustable Depth"],
       applications: ["Potato Planting", "Ridge Formation", "Fertilizer Application"],
       specifications: {
@@ -155,7 +165,7 @@ const Implements = () => {
         plantToPlant: "15-30 cm",
         weight: "650 kg"
       },
-      priceRange: "₹2.80 - 3.50 Lakhs",
+      priceRange: "Contact for Price",
       description: "Precision potato planter with fertilizer unit for efficient potato cultivation.",
       popular: false
     }
@@ -374,12 +384,12 @@ const Implements = () => {
                       </div>
 
                       {/* Price Range */}
-                      <div className="bg-gradient-to-r from-green-50 to-green-100 dark:from-green-900/20 dark:to-green-800/20 rounded-lg p-3 text-center">
-                        <p className="text-sm font-semibold text-green-800 dark:text-green-200 mb-1">
-                          Price Range: {implement.priceRange}
+                      <div className="bg-gradient-to-r from-primary/10 to-primary/20 rounded-lg p-3 text-center">
+                        <p className="text-sm font-semibold text-primary mb-1">
+                          Contact for Best Price
                         </p>
-                        <p className="text-xs text-green-600 dark:text-green-300">
-                          *Prices may vary. Contact for exact quote
+                        <p className="text-xs text-muted-foreground">
+                          Call us for competitive pricing and special offers
                         </p>
                       </div>
 

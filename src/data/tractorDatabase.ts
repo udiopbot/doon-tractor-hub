@@ -6,6 +6,10 @@ import mf1035Di from "@/assets/mf-1035-di.jpg";
 import mf241Di from "@/assets/mf-241-di.jpg";
 import mf245Di from "@/assets/mf-245-di-50hp.jpg";
 import mf5118 from "@/assets/mf-5118-2wd.jpg";
+import mf5118Enhanced from "@/assets/mf-5118-enhanced.jpg";
+import mf30Orchard from "@/assets/mf-30-orchard.jpg";
+import dynatrackSmart from "@/assets/dynatrack-smart.jpg";
+import dynatrackHeritage from "@/assets/dynatrack-heritage.jpg";
 import heroTractor from "@/assets/hero-tractor.jpg";
 
 export interface TractorSpecs {
@@ -575,7 +579,7 @@ export const tractorDatabase: TractorData[] = [
     hp: "30 HP",
     category: "Tractor",
     priceRange: "Contact for Price",
-    image: heroTractor,
+    image: mf30Orchard,
     officialSpecs: {
       powerRange: "30 HP (22.06 kW)",
       engine: "SIMPSONS S318 TIII A",
@@ -625,7 +629,7 @@ export const dynaTrackDatabase: TractorData[] = [
     hp: "50 HP",
     category: "DynaTrack",
     priceRange: "Contact for Price",
-    image: heroTractor,
+    image: dynatrackSmart,
     officialSpecs: {
       powerRange: "50 HP (36.76 kW)",
       engine: "Advanced DynaTrack Engine",
@@ -672,7 +676,7 @@ export const dynaTrackDatabase: TractorData[] = [
     hp: "48 HP",
     category: "DynaTrack",
     priceRange: "Contact for Price",
-    image: heroTractor,
+    image: dynatrackHeritage,
     officialSpecs: {
       powerRange: "48 HP (35.28 kW)",
       engine: "Heritage DynaTrack Engine",
