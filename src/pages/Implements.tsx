@@ -412,16 +412,6 @@ const Implements = () => {
                           WhatsApp
                         </Button>
                       </div>
-                      
-                      <Button 
-                        size="sm" 
-                        variant="secondary" 
-                        className="w-full text-xs"
-                        onClick={() => handleEmail(implement)}
-                      >
-                        <Mail className="mr-1 h-3 w-3" />
-                        Get Detailed Quote
-                      </Button>
                     </CardContent>
                   </Card>
                 ))}

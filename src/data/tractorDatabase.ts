@@ -113,7 +113,7 @@ export const tractorDatabase: TractorData[] = [
     hp: "40 HP",
     category: "Tractor",
     priceRange: "₹6.04 - 6.72 Lakhs",
-    image: mf1035Di,
+    image: mf5118Enhanced,
     officialSpecs: {
       powerRange: "40 HP (27.6 kW)",
       engine: "SIMPSONS S337 T III A",
@@ -159,7 +159,7 @@ export const tractorDatabase: TractorData[] = [
     hp: "35 HP",
     category: "Tractor",
     priceRange: "Contact for Price",
-    image: mf1035Di,
+    image: heroTractor,
     officialSpecs: {
       powerRange: "35 HP (25.73 kW)",
       engine: "SIMPSONS S324 TIII A",
@@ -205,7 +205,7 @@ export const tractorDatabase: TractorData[] = [
     hp: "38 HP",
     category: "Tractor",
     priceRange: "Contact for Price",
-    image: mf1035Di,
+    image: mf5118,
     officialSpecs: {
       powerRange: "38 HP (27.94 kW)",
       engine: "SIMPSONS S324 TIII A Enhanced",

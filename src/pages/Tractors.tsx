@@ -10,6 +10,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import { tractorDatabase, dynaTrackDatabase } from "@/data/tractorDatabase";
+import mf5118Image from "@/assets/mf-5118-2wd.jpg";
 
 const Tractors = () => {
   const navigate = useNavigate();
@@ -49,7 +50,7 @@ const Tractors = () => {
     hp: "20 HP",
     transmission: "Sliding Mesh (8F + 2R)",
     priceRange: "Contact for Price",
-    image: "/src/assets/mf-5118-2wd.jpg",
+    image: mf5118Image,
     features: [
       "20 HP category, compact and fuel efficient",
       "1-cylinder engine, 825 cc displacement",
@@ -358,16 +359,6 @@ const Tractors = () => {
                           View Details
                         </Button>
                       </div>
-                      
-                      <Button 
-                        size="sm" 
-                        variant="secondary" 
-                        className="w-full text-xs"
-                        onClick={() => handleEmail(tractor)}
-                      >
-                        <Mail className="mr-1 h-3 w-3" />
-                        Get Detailed Quote
-                      </Button>
                     </CardContent>
                   </Card>
                 ))}
