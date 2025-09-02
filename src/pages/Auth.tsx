@@ -8,8 +8,10 @@ import { Phone, Mail, LogIn, UserPlus, ArrowLeft } from "lucide-react";
 import { useAuth } from "@/contexts/AuthContext";
 import { useNavigate } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 
 const Auth = () => {
   const [phone, setPhone] = useState('');
@@ -74,11 +76,46 @@ const Auth = () => {
     setLoading(false);
   };
 
+  const handleOtpVerify = async () => {
+    if (otp.length !== 6) {
+      toast({
+        variant: "destructive",
+        title: "Invalid OTP",
+        description: "Please enter a valid 6-digit code"
+      });
+      return;
+    }
+
+    setLoading(true);
+    const { error } = await supabase.auth.verifyOtp({
+      phone,
+      token: otp,
+      type: 'sms'
+    });
+
+    if (error) {
+      toast({
+        variant: "destructive",
+        title: "Verification failed",
+        description: error.message || "Invalid verification code"
+      });
+    } else {
+      toast({
+        title: "Success!",
+        description: "Successfully verified! Redirecting..."
+      });
+      navigate('/');
+    }
+    setLoading(false);
+  };
+
   return (
     <>
-      <title>Login & Signup - Doon Motors | Massey Ferguson Tractors</title>
-      <meta name="description" content="Login or signup to access exclusive tractor deals and personalized service from Doon Motors, your trusted Massey Ferguson dealer." />
-
+      <SEOHead 
+        title="Login & Signup - Doon Motors | Massey Ferguson Tractors"
+        description="Login or signup to access exclusive tractor deals and personalized service from Doon Motors, your trusted Massey Ferguson dealer."
+        keywords="Doon Motors login, signup, Massey Ferguson account, tractor deals, user registration"
+      />
       <div className="min-h-screen bg-background">
         <Header />
         
@@ -183,6 +220,7 @@ const Auth = () => {
                       <Button
                         className="w-full"
                         size="lg"
+                        onClick={handleOtpVerify}
                         disabled={loading || otp.length !== 6}
                       >
                         <LogIn className="mr-2 h-4 w-4" />
