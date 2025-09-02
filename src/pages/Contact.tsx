@@ -1,42 +1,19 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
-import { MapPin, Phone, Mail, Clock, MessageCircle, User, Send } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, MessageCircle, User } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    subject: '',
-    message: ''
-  });
-
   const handleCall = () => {
     window.open('tel:+917895327351');
   };
 
   const handleWhatsApp = () => {
     window.open('https://wa.me/917895327351', '_blank');
-  };
-
-  const handleEmailSubmit = () => {
-    const subject = `Contact Form: ${formData.subject || 'General Inquiry'}`;
-    const body = `Name: ${formData.name}\nPhone: ${formData.phone}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`;
-    window.open(`mailto:doonmotors.tractortafe@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`);
-  };
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
   };
 
   const contactInfo = [
@@ -149,88 +126,45 @@ const Contact = () => {
           <section className="py-16 bg-secondary/30">
             <div className="container mx-auto px-4">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                {/* Contact Form */}
+                {/* Quick Contact Options */}
                 <Card>
                   <CardHeader>
                     <CardTitle className="flex items-center gap-2">
-                      <Send className="h-5 w-5 text-primary" />
-                      Send us a Message
+                      <MessageCircle className="h-5 w-5 text-primary" />
+                      Get Instant Quote on WhatsApp
                     </CardTitle>
                     <p className="text-muted-foreground">
-                      Fill out the form below and we'll get back to you as soon as possible.
+                      Chat with our experts instantly for quick quotes and personalized recommendations.
                     </p>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div>
-                        <label className="text-sm font-medium mb-2 block">Name *</label>
-                        <Input
-                          name="name"
-                          placeholder="Your full name"
-                          value={formData.name}
-                          onChange={handleInputChange}
-                          required
-                        />
-                      </div>
-                      <div>
-                        <label className="text-sm font-medium mb-2 block">Phone *</label>
-                        <Input
-                          name="phone"
-                          placeholder="Your phone number"
-                          type="tel"
-                          value={formData.phone}
-                          onChange={handleInputChange}
-                          required
-                        />
-                      </div>
-                    </div>
-                    
-                    <div>
-                      <label className="text-sm font-medium mb-2 block">Email</label>
-                      <Input
-                        name="email"
-                        placeholder="Your email address"
-                        type="email"
-                        value={formData.email}
-                        onChange={handleInputChange}
-                      />
-                    </div>
-                    
-                    <div>
-                      <label className="text-sm font-medium mb-2 block">Subject</label>
-                      <Input
-                        name="subject"
-                        placeholder="What can we help you with?"
-                        value={formData.subject}
-                        onChange={handleInputChange}
-                      />
-                    </div>
-                    
-                    <div>
-                      <label className="text-sm font-medium mb-2 block">Message *</label>
-                      <Textarea
-                        name="message"
-                        placeholder="Tell us about your requirements, preferred tractor model, or any questions you have..."
-                        rows={5}
-                        value={formData.message}
-                        onChange={handleInputChange}
-                        required
-                      />
-                    </div>
+                    <Button 
+                      className="w-full bg-green-600 hover:bg-green-700" 
+                      size="lg"
+                      onClick={handleWhatsApp}
+                    >
+                      <MessageCircle className="mr-2 h-4 w-4" />
+                      Start WhatsApp Chat
+                    </Button>
                     
                     <Button 
                       className="w-full" 
                       size="lg"
-                      onClick={handleEmailSubmit}
-                      disabled={!formData.name || !formData.phone || !formData.message}
+                      onClick={handleCall}
                     >
-                      <Send className="mr-2 h-4 w-4" />
-                      Send Message
+                      <Phone className="mr-2 h-4 w-4" />
+                      Call Now: +91 78953 27351
                     </Button>
                     
-                    <p className="text-xs text-muted-foreground text-center">
-                      * Required fields. We typically respond within 2-4 hours during business hours.
-                    </p>
+                    <div className="text-center p-4 bg-primary/10 rounded-lg">
+                      <h4 className="font-semibold mb-2">Why WhatsApp?</h4>
+                      <ul className="text-sm text-muted-foreground space-y-1">
+                        <li>• Instant responses during business hours</li>
+                        <li>• Share photos and videos easily</li>
+                        <li>• Get real-time pricing updates</li>
+                        <li>• No need to fill forms</li>
+                      </ul>
+                    </div>
                   </CardContent>
                 </Card>
 
@@ -257,36 +191,25 @@ const Contact = () => {
 
                   <Card>
                     <CardHeader>
-                      <CardTitle>Quick Contact Options</CardTitle>
+                      <CardTitle>Popular Tractor Models</CardTitle>
+                      <p className="text-muted-foreground">
+                        Ask about these popular models on WhatsApp
+                      </p>
                     </CardHeader>
-                    <CardContent className="space-y-4">
-                      <Button 
-                        className="w-full" 
-                        size="lg"
-                        onClick={handleCall}
-                      >
-                        <Phone className="mr-2 h-4 w-4" />
-                        Call Now: +91 78953 27351
-                      </Button>
-                      
-                      <Button 
-                        className="w-full bg-green-600 hover:bg-green-700" 
-                        size="lg"
-                        onClick={handleWhatsApp}
-                      >
-                        <MessageCircle className="mr-2 h-4 w-4" />
-                        WhatsApp Chat
-                      </Button>
-                      
-                      <Button 
-                        className="w-full" 
-                        variant="outline" 
-                        size="lg"
-                        onClick={() => window.open('mailto:doonmotors.tractortafe@gmail.com')}
-                      >
-                        <Mail className="mr-2 h-4 w-4" />
-                        Email Us Directly
-                      </Button>
+                    <CardContent>
+                      <div className="space-y-3">
+                        {['MF 1035 DI', 'MF 241 PD', 'MF 245 DI', 'MF 9500 Smart', 'DynaTrack Smart'].map((model, index) => (
+                          <Button 
+                            key={index}
+                            variant="outline"
+                            className="w-full justify-start"
+                            onClick={() => window.open('https://wa.me/917895327351?text=' + encodeURIComponent(`I'm interested in ${model}. Please share details and pricing.`), '_blank')}
+                          >
+                            <MessageCircle className="mr-2 h-4 w-4" />
+                            Ask about {model}
+                          </Button>
+                        ))}
+                      </div>
                     </CardContent>
                   </Card>
 

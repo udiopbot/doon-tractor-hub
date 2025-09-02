@@ -1,15 +1,15 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Phone, Download, Eye } from "lucide-react";
+import { Phone, Eye, MessageCircle } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import { tractors } from "@/data/tractorDatabase";
+import { implementDatabase } from "@/data/tractorDatabase";
 
-const FeaturedTractors = () => {
+const FeaturedImplements = () => {
   const navigate = useNavigate();
   
-  // Get popular tractors from the real database
-  const featuredTractors = tractors.filter(tractor => tractor.popular).slice(0, 3);
+  // Get the first 3 implements for featured section
+  const featuredImplements = implementDatabase.slice(0, 3);
 
   return (
     <section className="py-16 bg-secondary/30">
@@ -17,33 +17,27 @@ const FeaturedTractors = () => {
         {/* Section Header */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Popular Massey Ferguson Tractors
+            Agricultural Implements
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Choose from our wide range of genuine Massey Ferguson tractors, 
-            perfect for Indian farming conditions and built to last.
+            Complete your farming setup with our range of high-quality implements 
+            designed to work perfectly with Massey Ferguson tractors.
           </p>
         </div>
 
-        {/* Tractor Grid */}
+        {/* Implements Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-          {featuredTractors.map((tractor) => (
-            <Card key={tractor.id} className="overflow-hidden hover:shadow-lg transition-shadow">
-              {tractor.popular && (
-                <div className="bg-primary text-primary-foreground text-center py-2 text-sm font-medium">
-                  Most Popular Choice
-                </div>
-              )}
-              
+          {featuredImplements.map((implement) => (
+            <Card key={implement.id} className="overflow-hidden hover:shadow-lg transition-shadow">
               <div className="aspect-video bg-gradient-to-br from-gray-100 to-gray-200 relative overflow-hidden">
                 <img 
-                  src={tractor.image} 
-                  alt={tractor.model}
+                  src={implement.image} 
+                  alt={implement.name}
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute top-4 right-4">
                   <Badge className="bg-accent text-accent-foreground">
-                    {tractor.hp}
+                    {implement.category}
                   </Badge>
                 </div>
               </div>
@@ -52,9 +46,9 @@ const FeaturedTractors = () => {
                 <div className="flex justify-between items-start">
                   <div>
                     <CardTitle className="text-xl font-bold text-foreground">
-                      {tractor.model}
+                      {implement.name}
                     </CardTitle>
-                    <p className="text-sm text-muted-foreground">{tractor.series}</p>
+                    <p className="text-sm text-muted-foreground">{implement.category}</p>
                   </div>
                   <div className="text-right">
                     <Button 
@@ -71,17 +65,24 @@ const FeaturedTractors = () => {
 
               <CardContent>
                 <div className="space-y-4">
+                  {/* Description */}
+                  <p className="text-sm text-muted-foreground">
+                    {implement.description}
+                  </p>
+
                   {/* Key Features */}
-                  <div>
-                    <h4 className="text-sm font-semibold text-foreground mb-2">Key Features:</h4>
-                    <div className="flex flex-wrap gap-1">
-                      {tractor.keyFeatures.slice(0, 3).map((feature, index) => (
-                        <Badge key={index} variant="secondary" className="text-xs">
-                          {feature}
-                        </Badge>
-                      ))}
+                  {implement.specifications && (
+                    <div>
+                      <h4 className="text-sm font-semibold text-foreground mb-2">Specifications:</h4>
+                      <div className="flex flex-wrap gap-1">
+                        {implement.specifications.slice(0, 3).map((spec, index) => (
+                          <Badge key={index} variant="secondary" className="text-xs">
+                            {spec}
+                          </Badge>
+                        ))}
+                      </div>
                     </div>
-                  </div>
+                  )}
 
                   {/* Action Buttons */}
                   <div className="grid grid-cols-2 gap-2">
@@ -97,25 +98,12 @@ const FeaturedTractors = () => {
                       size="sm" 
                       variant="outline" 
                       className="text-xs"
-                      onClick={() => {
-                        const encodedModel = encodeURIComponent(tractor.model.toLowerCase().replace(/\s+/g, '-'));
-                        navigate(`/tractors/${encodedModel}`);
-                      }}
+                      onClick={() => window.open('https://wa.me/917895327351?text=' + encodeURIComponent(`I'm interested in ${implement.name}. Please share more details and pricing.`), '_blank')}
                     >
-                      <Eye className="mr-1 h-3 w-3" />
-                      View Details
+                      <MessageCircle className="mr-1 h-3 w-3" />
+                      WhatsApp Quote
                     </Button>
                   </div>
-                  
-                  <Button 
-                    size="sm" 
-                    variant="secondary" 
-                    className="w-full text-xs"
-                    onClick={() => window.open('https://wa.me/917895327351?text=' + encodeURIComponent(`I'm interested in ${tractor.model}. Please share more details and pricing.`), '_blank')}
-                  >
-                    <Download className="mr-1 h-3 w-3" />
-                    Get Quote on WhatsApp
-                  </Button>
                 </div>
               </CardContent>
             </Card>
@@ -124,8 +112,8 @@ const FeaturedTractors = () => {
 
         {/* View All Button */}
         <div className="text-center">
-          <Button size="lg" variant="outline" className="px-8" onClick={() => navigate('/tractors')}>
-            View All Tractors
+          <Button size="lg" variant="outline" className="px-8" onClick={() => navigate('/implements')}>
+            View All Implements
           </Button>
         </div>
       </div>
@@ -133,4 +121,4 @@ const FeaturedTractors = () => {
   );
 };
 
-export default FeaturedTractors;
+export default FeaturedImplements;

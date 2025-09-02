@@ -1,9 +1,30 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, Phone, MessageCircle } from "lucide-react";
+import { Menu, Phone, MessageCircle, User, LogOut } from "lucide-react";
+import { useAuth } from "@/contexts/AuthContext";
+import { useNavigate } from "react-router-dom";
+import { useToast } from "@/hooks/use-toast";
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { user, profile, signOut, loading } = useAuth();
+  const navigate = useNavigate();
+  const { toast } = useToast();
+
+  const handleSignOut = async () => {
+    const { error } = await signOut();
+    if (error) {
+      toast({
+        variant: "destructive",
+        title: "Error",
+        description: "Failed to sign out"
+      });
+    } else {
+      toast({
+        title: "Signed out successfully"
+      });
+    }
+  };
   const navItems = [{
     label: "Home",
     href: "/"
@@ -57,6 +78,33 @@ const Header = () => {
               <MessageCircle className="h-4 w-4" />
               WhatsApp
             </Button>
+            
+            {/* Auth Buttons */}
+            {!loading && (
+              user ? (
+                <div className="flex items-center space-x-2">
+                  <span className="text-sm text-muted-foreground">
+                    Welcome, {profile?.display_name || user.email?.split('@')[0] || 'User'}
+                  </span>
+                  <Button 
+                    variant="ghost" 
+                    size="sm"
+                    onClick={handleSignOut}
+                  >
+                    <LogOut className="h-4 w-4" />
+                  </Button>
+                </div>
+              ) : (
+                <Button 
+                  variant="outline"
+                  size="sm"
+                  onClick={() => navigate('/auth')}
+                >
+                  <User className="mr-2 h-4 w-4" />
+                  Login / Signup
+                </Button>
+              )
+            )}
           </div>
 
           {/* Mobile Menu */}
@@ -94,6 +142,38 @@ const Header = () => {
                     <MessageCircle className="h-4 w-4" />
                     Chat on WhatsApp
                   </Button>
+                  
+                  {/* Mobile Auth Buttons */}
+                  {!loading && (
+                    user ? (
+                      <div className="space-y-2">
+                        <div className="text-center py-2">
+                          <p className="text-sm text-muted-foreground">Welcome,</p>
+                          <p className="font-medium">{profile?.display_name || user.email?.split('@')[0] || 'User'}</p>
+                        </div>
+                        <Button 
+                          variant="outline"
+                          className="w-full gap-2"
+                          onClick={handleSignOut}
+                        >
+                          <LogOut className="h-4 w-4" />
+                          Sign Out
+                        </Button>
+                      </div>
+                    ) : (
+                      <Button 
+                        variant="outline"
+                        className="w-full gap-2"
+                        onClick={() => {
+                          navigate('/auth');
+                          setIsOpen(false);
+                        }}
+                      >
+                        <User className="h-4 w-4" />
+                        Login / Signup
+                      </Button>
+                    )
+                  )}
                 </div>
               </div>
             </SheetContent>

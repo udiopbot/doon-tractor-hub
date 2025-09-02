@@ -3,8 +3,8 @@ import { Button } from "@/components/ui/button";
 
 const WhatsAppFloat = () => {
   const handleWhatsAppClick = () => {
-    // Replace with actual WhatsApp number
-    const phoneNumber = "919876543210"; // Format: country code + number
+    // Using the correct WhatsApp number from Doon Motors
+    const phoneNumber = "917895327351"; // Format: country code + number
     const message = "Hi! I'm interested in Massey Ferguson tractors. Please share more details.";
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
