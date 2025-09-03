@@ -21,7 +21,7 @@ const FeaturedTractors = () => {
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Choose from our wide range of genuine Massey Ferguson tractors, 
-            perfect for Indian farming conditions and built to last.
+            organized by model families with multiple variants to suit your needs.
           </p>
         </div>
 
@@ -125,7 +125,7 @@ const FeaturedTractors = () => {
         {/* View All Button */}
         <div className="text-center">
           <Button size="lg" variant="outline" className="px-8" onClick={() => navigate('/tractors')}>
-            View All Tractors
+            Browse All Tractor Families
           </Button>
         </div>
       </div>

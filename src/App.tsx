@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "@/contexts/AuthContext";
 import Index from "./pages/Index";
 import Tractors from "./pages/Tractors";
+import TractorCatalog from "./pages/TractorCatalog";
 import TractorDetails from "./pages/TractorDetails";
 import Implements from "./pages/Implements";
 import About from "./pages/About";
@@ -24,7 +25,8 @@ const App = () => (
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />
-            <Route path="/tractors" element={<Tractors />} />
+            <Route path="/tractors" element={<TractorCatalog />} />
+            <Route path="/tractors-old" element={<Tractors />} />
             <Route path="/tractors/:model" element={<TractorDetails />} />
             <Route path="/implements" element={<Implements />} />
             <Route path="/about" element={<About />} />
