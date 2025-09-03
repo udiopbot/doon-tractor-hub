@@ -15,8 +15,8 @@ import { TractorFamily } from "@/types/TractorTypes";
 
 const TractorCatalog = () => {
   const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('');
-  const [selectedHpRange, setSelectedHpRange] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedHpRange, setSelectedHpRange] = useState('all');
   const [viewMode, setViewMode] = useState<'families' | 'details'>('families');
   const [selectedFamily, setSelectedFamily] = useState<TractorFamily | null>(null);
 
@@ -30,9 +30,9 @@ const TractorCatalog = () => {
         family.familyName.toLowerCase().includes(searchTerm.toLowerCase()) ||
         family.variants.some(v => v.model.toLowerCase().includes(searchTerm.toLowerCase()));
       
-      const matchesCategory = selectedCategory === '' || family.category === selectedCategory;
+      const matchesCategory = selectedCategory === 'all' || family.category === selectedCategory;
       
-      const matchesHp = selectedHpRange === '' || family.variants.some(variant => {
+      const matchesHp = selectedHpRange === 'all' || family.variants.some(variant => {
         const hp = parseInt(variant.hp);
         switch (selectedHpRange) {
           case '20-30': return hp >= 20 && hp <= 30;
@@ -133,7 +133,7 @@ const TractorCatalog = () => {
                     <SelectValue placeholder="All Categories" />
                   </SelectTrigger>
                   <SelectContent className="bg-background border shadow-lg">
-                    <SelectItem value="">All Categories</SelectItem>
+                    <SelectItem value="all">All Categories</SelectItem>
                     {categories.map(category => (
                       <SelectItem key={category} value={category}>{category}</SelectItem>
                     ))}
@@ -145,7 +145,7 @@ const TractorCatalog = () => {
                     <SelectValue placeholder="All Power Ranges" />
                   </SelectTrigger>
                   <SelectContent className="bg-background border shadow-lg">
-                    <SelectItem value="">All Power Ranges</SelectItem>
+                    <SelectItem value="all">All Power Ranges</SelectItem>
                     {hpRanges.map(range => (
                       <SelectItem key={range} value={range}>{range} HP</SelectItem>
                     ))}

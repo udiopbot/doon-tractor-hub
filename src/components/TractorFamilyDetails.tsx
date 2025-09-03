@@ -30,7 +30,7 @@ const TractorFamilyDetails = ({ family, onBack }: TractorFamilyDetailsProps) => 
 
   const filteredVariants = family.variants.filter(variant => {
     return Object.entries(filters).every(([filterType, filterValue]) => {
-      if (!filterValue) return true;
+      if (!filterValue || filterValue === 'all') return true;
       return variant.variant.toLowerCase().includes(filterValue.toLowerCase());
     });
   });
@@ -73,14 +73,14 @@ const TractorFamilyDetails = ({ family, onBack }: TractorFamilyDetailsProps) => 
             {variantOptions.map(option => (
               <Select 
                 key={option.type}
-                value={filters[option.type] || ""} 
+                value={filters[option.type] || "all"} 
                 onValueChange={(value) => setFilters(prev => ({ ...prev, [option.type]: value }))}
               >
                 <SelectTrigger>
                   <SelectValue placeholder={`Filter by ${option.label}`} />
                 </SelectTrigger>
                 <SelectContent className="bg-background border shadow-lg">
-                  <SelectItem value="">All {option.label}</SelectItem>
+                  <SelectItem value="all">All {option.label}</SelectItem>
                   {option.options.map(opt => (
                     <SelectItem key={opt} value={opt}>{opt}</SelectItem>
                   ))}
