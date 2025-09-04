@@ -1693,6 +1693,4 @@ export const completeTractorDatabase: TractorData[] = [
   }
 ];
 
-// Export the complete database
-export { completeTractorDatabase };
 export default completeTractorDatabase;

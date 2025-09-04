@@ -1,8 +1,9 @@
 // Update the existing database to use the complete one
-import { completeTractorDatabase } from './completeTractorDatabase';
+import completeTractorDatabase from '../data/completeTractorDatabase';
+import { TractorData } from '../data/tractorDatabase';
+import { TractorFamily, TractorVariant } from "@/types/TractorTypes";
 
 export const allEnhancedTractorData = completeTractorDatabase;
-import { TractorFamily, TractorVariant } from "@/types/TractorTypes";
 
 export const groupTractorsByFamily = (tractors: TractorData[]): TractorFamily[] => {
   const familyMap = new Map<string, TractorData[]>();
