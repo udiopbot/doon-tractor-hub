@@ -9,9 +9,17 @@ import WhatsAppFloat from "@/components/WhatsAppFloat";
 import TractorFamilyCard from "@/components/TractorFamilyCard";
 import TractorFamilyDetails from "@/components/TractorFamilyDetails";
 import SEOHead from "@/components/SEOHead";
-import { allTractorData } from "@/data/tractorDatabase";
-import { groupTractorsByFamily } from "@/utils/tractorFamilyUtils";
-import { TractorFamily } from "@/types/TractorTypes";
+import { 
+  tractorFamilies, 
+  implementsDatabase, 
+  getHPRanges, 
+  getDriveTypes, 
+  getTransmissionTypes, 
+  getModelFamilies,
+  filterTractorsByHP,
+  type TractorFamily,
+  type TractorModel
+} from "@/data/newTractorDatabase";
 
 const TractorCatalog = () => {
   const [searchTerm, setSearchTerm] = useState('');
