@@ -483,6 +483,1665 @@ export const tractorFamilies: TractorFamily[] = [
         useCase: "Small farms requiring better braking performance"
       }
     ]
+  },
+  {
+    familyName: "MF 1035 R",
+    familyId: "mf-1035-r",
+    baseModel: "MF 1035 R",
+    description: "Reliable 35HP tractor series with advanced features for modern farming.",
+    mainImage: mf1035R,
+    category: "Mid-Range",
+    priceRange: "₹7.5L - ₹8.5L",
+    seoDescription: "MF 1035 R series tractors with OIB brakes and enhanced durability.",
+    variants: [
+      {
+        id: 1156,
+        model: "1156",
+        variant: "OIB 2WD",
+        hp: "35",
+        image: mf1035R,
+        priceRange: "₹8.5L",
+        officialSpecs: {
+          engine: "Simpson 3 Cylinder, 2270cc",
+          fuelTank: "45 Litres",
+          liftingCapacity: "1100 kg",
+          pto: "540 RPM",
+          gearBox: "8 F + 2 R",
+          driveType: "2WD",
+          transmission: "Sliding Mesh"
+        },
+        keyFeatures: ["Oil Immersed Brakes", "Enhanced Build", "Reliable Performance"],
+        applications: ["General Farming", "Field Operations", "Medium Duty Work"],
+        useCase: "Medium-scale farming requiring reliable performance"
+      },
+      {
+        id: 668,
+        model: "668",
+        variant: "Other states 2WD",
+        hp: "35",
+        image: mf1035R,
+        priceRange: "₹7.5L",
+        officialSpecs: {
+          engine: "Simpson 3 Cylinder, 2270cc",
+          fuelTank: "45 Litres",
+          liftingCapacity: "1100 kg",
+          pto: "540 RPM",
+          gearBox: "8 F + 2 R",
+          driveType: "2WD",
+          transmission: "Sliding Mesh"
+        },
+        keyFeatures: ["Standard Configuration", "Economic Operation", "Versatile Use"],
+        applications: ["Regional Farming", "General Purpose", "Field Work"],
+        useCase: "Regional farming operations with specific requirements"
+      }
+    ]
+  },
+  {
+    familyName: "MF 1035 MS",
+    familyId: "mf-1035-ms",
+    baseModel: "MF 1035 MS",
+    description: "Manual steering 35HP tractor with robust build for intensive farming.",
+    mainImage: mf1035DiNew,
+    category: "Mid-Range",
+    priceRange: "₹7.0L - ₹8.0L",
+    seoDescription: "MF 1035 MS tractor with manual steering for cost-effective farming.",
+    variants: [
+      {
+        id: 573,
+        model: "573",
+        variant: "MS 2WD",
+        hp: "35",
+        image: mf1035DiNew,
+        priceRange: "₹7.5L",
+        officialSpecs: {
+          engine: "Simpson 3 Cylinder, 2270cc",
+          fuelTank: "45 Litres",
+          liftingCapacity: "1100 kg",
+          pto: "540 RPM",
+          gearBox: "8 F + 2 R",
+          driveType: "2WD",
+          transmission: "Manual Steering"
+        },
+        keyFeatures: ["Manual Steering", "Robust Build", "Cost Effective"],
+        applications: ["General Farming", "Field Preparation", "Medium Operations"],
+        useCase: "Cost-conscious farmers requiring reliable manual steering tractor"
+      }
+    ]
+  },
+  {
+    familyName: "MF 1035 SP",
+    familyId: "mf-1035-sp",
+    baseModel: "MF 1035 SP",
+    description: "Super Plus 35HP tractor series with advanced features and superior lifting capacity.",
+    mainImage: mf1035DiSuperPlus,
+    category: "Premium",
+    priceRange: "₹8.0L - ₹10.0L",
+    seoDescription: "MF 1035 SP series with super plus features and enhanced lifting capacity.",
+    variants: [
+      {
+        id: 852,
+        model: "852",
+        variant: "SP OIB 2WD",
+        hp: "35",
+        image: mf1035DiSuperPlus,
+        priceRange: "₹8.5L",
+        officialSpecs: {
+          engine: "Simpson 3 Cylinder, 2270cc",
+          fuelTank: "45 Litres",
+          liftingCapacity: "1500 kg",
+          pto: "540 RPM",
+          gearBox: "8 F + 2 R",
+          driveType: "2WD",
+          transmission: "Sliding Mesh"
+        },
+        keyFeatures: ["Super Plus Features", "Oil Immersed Brakes", "Enhanced Lifting"],
+        applications: ["Heavy Duty Work", "Commercial Farming", "Large Implements"],
+        useCase: "Commercial operations requiring enhanced lifting capacity"
+      },
+      {
+        id: 1048,
+        model: "1048",
+        variant: "SP OIB 2WD",
+        hp: "35",
+        image: mf1035DiSuperPlus,
+        priceRange: "₹9.0L",
+        officialSpecs: {
+          engine: "Simpson 3 Cylinder, 2270cc",
+          fuelTank: "45 Litres",
+          liftingCapacity: "1500 kg",
+          pto: "540 RPM",
+          gearBox: "8 F + 2 R",
+          driveType: "2WD",
+          transmission: "Sliding Mesh"
+        },
+        keyFeatures: ["Advanced SP Features", "Oil Immersed Brakes", "Premium Build"],
+        applications: ["Professional Farming", "Heavy Work", "Commercial Use"],
+        useCase: "Professional farming requiring premium features"
+      },
+      {
+        id: 1221,
+        model: "1221",
+        variant: "SP OIB 2WD",
+        hp: "35",
+        image: mf1035DiSuperPlus,
+        priceRange: "₹9.5L",
+        officialSpecs: {
+          engine: "Simpson 3 Cylinder, 2270cc",
+          fuelTank: "45 Litres",
+          liftingCapacity: "1500 kg",
+          pto: "540 RPM",
+          gearBox: "8 F + 2 R",
+          driveType: "2WD",
+          transmission: "Sliding Mesh"
+        },
+        keyFeatures: ["Latest SP Features", "Enhanced Performance", "Premium Quality"],
+        applications: ["Modern Farming", "Heavy Implements", "Professional Use"],
+        useCase: "Latest generation super plus farming operations",
+        popular: true
+      },
+      {
+        id: 1036,
+        model: "1036",
+        variant: "SP Superlift 2WD",
+        hp: "35",
+        image: mf1035DiSuperPlus,
+        priceRange: "₹10.0L",
+        officialSpecs: {
+          engine: "Simpson 3 Cylinder, 2270cc",
+          fuelTank: "45 Litres",
+          liftingCapacity: "1800 kg",
+          pto: "540 RPM",
+          gearBox: "8 F + 2 R",
+          driveType: "2WD",
+          transmission: "Sliding Mesh"
+        },
+        keyFeatures: ["Super Lift Capacity", "Premium Features", "Maximum Performance"],
+        applications: ["Heavy Lifting", "Large Implements", "Commercial Operations"],
+        useCase: "Operations requiring maximum lifting capacity and performance",
+        popular: true
+      }
+    ]
+  },
+  {
+    familyName: "MF 241 Sona",
+    familyId: "mf-241-sona",
+    baseModel: "MF 241 Sona",
+    description: "Versatile 42HP tractor series with multiple configurations for diverse farming needs.",
+    mainImage: mf241Di,
+    category: "Mid-Range",
+    priceRange: "₹8.0L - ₹12.0L",
+    seoDescription: "MF 241 Sona series with Sona, Eagle variants and power steering options.",
+    variants: [
+      {
+        id: 578,
+        model: "578",
+        variant: "Sona 2WD",
+        hp: "42",
+        image: mf241Di,
+        priceRange: "₹8.0L",
+        officialSpecs: {
+          engine: "Simpson 3 Cylinder, 2270cc",
+          fuelTank: "50 Litres",
+          liftingCapacity: "1200 kg",
+          pto: "540 RPM",
+          gearBox: "8 F + 2 R",
+          driveType: "2WD",
+          transmission: "Manual Steering"
+        },
+        keyFeatures: ["Sona Configuration", "Manual Steering", "Versatile Use"],
+        applications: ["General Farming", "Field Operations", "Medium Duty Work"],
+        useCase: "Medium farming operations with manual steering preference"
+      },
+      {
+        id: 856,
+        model: "856",
+        variant: "Sona OIB+Platform 2WD",
+        hp: "42",
+        image: mf241Di,
+        priceRange: "₹9.0L",
+        officialSpecs: {
+          engine: "Simpson 3 Cylinder, 2270cc",
+          fuelTank: "50 Litres",
+          liftingCapacity: "1200 kg",
+          pto: "540 RPM",
+          gearBox: "8 F + 2 R",
+          driveType: "2WD",
+          transmission: "Manual Steering"
+        },
+        keyFeatures: ["Sona with Platform", "Oil Immersed Brakes", "Enhanced Comfort"],
+        applications: ["Field Work", "General Farming", "Platform Operations"],
+        useCase: "Farming requiring platform features and better braking"
+      },
+      {
+        id: 1116,
+        model: "1116",
+        variant: "856+ PS 2WD",
+        hp: "42",
+        image: mf241Di,
+        priceRange: "₹10.0L",
+        officialSpecs: {
+          engine: "Simpson 3 Cylinder, 2270cc",
+          fuelTank: "50 Litres",
+          liftingCapacity: "1200 kg",
+          pto: "540 RPM",
+          gearBox: "8 F + 2 R",
+          driveType: "2WD",
+          transmission: "Power Steering"
+        },
+        keyFeatures: ["Power Steering", "Enhanced 856 Features", "Premium Comfort"],
+        applications: ["Professional Farming", "Large Fields", "Comfort Operations"],
+        useCase: "Professional operations requiring power steering and enhanced features"
+      },
+      {
+        id: 905,
+        model: "905",
+        variant: "Sona PS 2WD",
+        hp: "42",
+        image: mf241Di,
+        priceRange: "₹9.5L",
+        officialSpecs: {
+          engine: "Simpson 3 Cylinder, 2270cc",
+          fuelTank: "50 Litres",
+          liftingCapacity: "1200 kg",
+          pto: "540 RPM",
+          gearBox: "8 F + 2 R",
+          driveType: "2WD",
+          transmission: "Power Steering"
+        },
+        keyFeatures: ["Sona with Power Steering", "Enhanced Comfort", "Easy Operation"],
+        applications: ["Professional Farming", "Medium Scale Operations", "Comfort Work"],
+        useCase: "Medium farming requiring power steering comfort",
+        popular: true
+      },
+      {
+        id: 911,
+        model: "911",
+        variant: "Eagle 2WD",
+        hp: "42",
+        image: mf241Di,
+        priceRange: "₹8.5L",
+        officialSpecs: {
+          engine: "Simpson 3 Cylinder, 2270cc",
+          fuelTank: "50 Litres",
+          liftingCapacity: "1200 kg",
+          pto: "540 RPM",
+          gearBox: "8 F + 2 R",
+          driveType: "2WD",
+          transmission: "Manual Steering"
+        },
+        keyFeatures: ["Eagle Configuration", "Enhanced Performance", "Reliable Build"],
+        applications: ["Field Operations", "General Farming", "Medium Work"],
+        useCase: "Farming requiring Eagle series reliability"
+      },
+      {
+        id: 970,
+        model: "970",
+        variant: "Eagle PS 2WD",
+        hp: "42",
+        image: mf241Di,
+        priceRange: "₹10.5L",
+        officialSpecs: {
+          engine: "Simpson 3 Cylinder, 2270cc",
+          fuelTank: "50 Litres",
+          liftingCapacity: "1200 kg",
+          pto: "540 RPM",
+          gearBox: "8 F + 2 R",
+          driveType: "2WD",
+          transmission: "Power Steering"
+        },
+        keyFeatures: ["Eagle with Power Steering", "Premium Performance", "Enhanced Comfort"],
+        applications: ["Professional Farming", "Large Operations", "Premium Work"],
+        useCase: "Professional Eagle series operations with power steering",
+        popular: true
+      },
+      {
+        id: 992,
+        model: "992",
+        variant: "Eagle OIB 2WD",
+        hp: "42",
+        image: mf241Di,
+        priceRange: "₹9.5L",
+        officialSpecs: {
+          engine: "Simpson 3 Cylinder, 2270cc",
+          fuelTank: "50 Litres",
+          liftingCapacity: "1200 kg",
+          pto: "540 RPM",
+          gearBox: "8 F + 2 R",
+          driveType: "2WD",
+          transmission: "Manual Steering"
+        },
+        keyFeatures: ["Eagle with OIB", "Enhanced Braking", "Reliable Performance"],
+        applications: ["Field Work", "General Farming", "Safety Critical Operations"],
+        useCase: "Eagle series farming requiring enhanced braking performance"
+      },
+      {
+        id: 993,
+        model: "993",
+        variant: "Eagle OIB PS 2WD",
+        hp: "42",
+        image: mf241Di,
+        priceRange: "₹12.0L",
+        officialSpecs: {
+          engine: "Simpson 3 Cylinder, 2270cc",
+          fuelTank: "50 Litres",
+          liftingCapacity: "1200 kg",
+          pto: "540 RPM",
+          gearBox: "8 F + 2 R",
+          driveType: "2WD",
+          transmission: "Power Steering"
+        },
+        keyFeatures: ["Eagle OIB with PS", "Premium Features", "Maximum Comfort"],
+        applications: ["Professional Farming", "Premium Operations", "Heavy Work"],
+        useCase: "Premium Eagle series operations with all enhanced features",
+        popular: true
+      }
+    ]
+  },
+  {
+    familyName: "MF 241 PD",
+    familyId: "mf-241-pd",
+    baseModel: "MF 241 PD",
+    description: "Power Drive 42HP tractor series with advanced transmission and drive options.",
+    mainImage: mf241Pd,
+    category: "Mid-Range",
+    priceRange: "₹9.0L - ₹13.0L",
+    seoDescription: "MF 241 PD series with Super Steer, Ultra PD and 4WD configurations.",
+    variants: [
+      {
+        id: 598,
+        model: "598",
+        variant: "SS MS 2WD",
+        hp: "42",
+        image: mf241Pd,
+        priceRange: "₹9.0L",
+        officialSpecs: {
+          engine: "Simpson 3 Cylinder, 2270cc",
+          fuelTank: "50 Litres",
+          liftingCapacity: "1200 kg",
+          pto: "540 RPM",
+          gearBox: "12 F + 3 R",
+          driveType: "2WD",
+          transmission: "Super Steer Manual"
+        },
+        keyFeatures: ["Super Steer", "12+3 Gearbox", "Manual Steering"],
+        applications: ["Precision Farming", "Field Operations", "Advanced Work"],
+        useCase: "Precision farming requiring super steer capabilities"
+      },
+      {
+        id: 779,
+        model: "779",
+        variant: "Ultra PD - CS 2WD",
+        hp: "42",
+        image: mf241Pd,
+        priceRange: "₹11.0L",
+        officialSpecs: {
+          engine: "Simpson 3 Cylinder, 2270cc",
+          fuelTank: "50 Litres",
+          liftingCapacity: "1200 kg",
+          pto: "540 RPM",
+          gearBox: "12 F + 3 R",
+          driveType: "2WD",
+          transmission: "Constant Mesh"
+        },
+        keyFeatures: ["Ultra PD", "Constant Mesh", "Advanced Transmission"],
+        applications: ["Professional Farming", "Heavy Work", "Advanced Operations"],
+        useCase: "Professional operations requiring ultra power drive features",
+        popular: true
+      },
+      {
+        id: 887,
+        model: "887",
+        variant: "4WD",
+        hp: "42",
+        image: mf241Pd4WD,
+        priceRange: "₹13.0L",
+        officialSpecs: {
+          engine: "Simpson 3 Cylinder, 2270cc",
+          fuelTank: "50 Litres",
+          liftingCapacity: "1200 kg",
+          pto: "540 RPM",
+          gearBox: "12 F + 3 R",
+          driveType: "4WD",
+          transmission: "Power Drive"
+        },
+        keyFeatures: ["4WD Drive", "Power Drive", "Maximum Traction"],
+        applications: ["Heavy Terrain", "Slope Farming", "Maximum Traction Work"],
+        useCase: "Operations requiring 4WD traction and power drive",
+        popular: true
+      },
+      {
+        id: 1047,
+        model: "1047",
+        variant: "SS PS (599) 2WD",
+        hp: "42",
+        image: mf241Pd,
+        priceRange: "₹12.0L",
+        officialSpecs: {
+          engine: "Simpson 3 Cylinder, 2270cc",
+          fuelTank: "50 Litres",
+          liftingCapacity: "1200 kg",
+          pto: "540 RPM",
+          gearBox: "12 F + 3 R",
+          driveType: "2WD",
+          transmission: "Super Steer Power"
+        },
+        keyFeatures: ["Super Steer Power", "Enhanced 599 Features", "Premium Comfort"],
+        applications: ["Professional Farming", "Precision Work", "Premium Operations"],
+        useCase: "Premium super steer operations with power steering",
+        popular: true
+      }
+    ]
+  },
+  {
+    familyName: "MF 241 Dyna",
+    familyId: "mf-241-dyna",
+    baseModel: "MF 241 Dyna",
+    description: "Dynamic transmission 42HP tractor with enhanced rear axle options.",
+    mainImage: mf241Di,
+    category: "Premium",
+    priceRange: "₹10.0L - ₹14.0L",
+    seoDescription: "MF 241 Dyna series with power steering and heavy rear axle configurations.",
+    variants: [
+      {
+        id: 839,
+        model: "839",
+        variant: "PS 2WD",
+        hp: "42",
+        image: mf241Di,
+        priceRange: "₹10.0L",
+        officialSpecs: {
+          engine: "Simpson 3 Cylinder, 2270cc",
+          fuelTank: "50 Litres",
+          liftingCapacity: "1200 kg",
+          pto: "540 RPM",
+          gearBox: "12 F + 3 R Synchro",
+          driveType: "2WD",
+          transmission: "Power Steering"
+        },
+        keyFeatures: ["Dynamic Transmission", "Power Steering", "Synchro Gearbox"],
+        applications: ["Professional Farming", "Advanced Operations", "Comfort Work"],
+        useCase: "Professional operations requiring dynamic transmission and power steering"
+      },
+      {
+        id: 1196,
+        model: "1196",
+        variant: "Heavy Rear Axle 2WD",
+        hp: "42",
+        image: mf241Di,
+        priceRange: "₹14.0L",
+        officialSpecs: {
+          engine: "Simpson 3 Cylinder, 2270cc",
+          fuelTank: "50 Litres",
+          liftingCapacity: "1500 kg",
+          pto: "540 RPM",
+          gearBox: "12 F + 3 R Synchro",
+          driveType: "2WD",
+          transmission: "Heavy Duty"
+        },
+        keyFeatures: ["Heavy Rear Axle", "Enhanced Lifting", "Premium Build"],
+        applications: ["Heavy Duty Work", "Large Implements", "Commercial Operations"],
+        useCase: "Heavy duty operations requiring enhanced rear axle strength",
+        popular: true
+      }
+    ]
+  },
+  {
+    familyName: "MF 244 Dyna",
+    familyId: "mf-244-dyna", 
+    baseModel: "MF 244 Dyna",
+    description: "44HP dynamic transmission tractor with smart features and 4WD options.",
+    mainImage: mf245Di,
+    category: "Mid-Range",
+    priceRange: "₹11.0L - ₹15.0L",
+    seoDescription: "MF 244 Dyna series with 4WD, 2WD and Smart configurations.",
+    variants: [
+      {
+        id: 1057,
+        model: "1057",
+        variant: "4WD",
+        hp: "44",
+        image: mf245Di,
+        priceRange: "₹15.0L",
+        officialSpecs: {
+          engine: "Simpson 3 Cylinder, 2500cc",
+          fuelTank: "55 Litres",
+          liftingCapacity: "1300 kg",
+          pto: "540 RPM",
+          gearBox: "12 F + 3 R Synchro",
+          driveType: "4WD",
+          transmission: "Dynamic"
+        },
+        keyFeatures: ["4WD Drive", "Dynamic Transmission", "Enhanced Traction"],
+        applications: ["Heavy Terrain", "Slope Farming", "Advanced Operations"],
+        useCase: "Operations requiring 4WD traction with dynamic features",
+        popular: true
+      },
+      {
+        id: 1117,
+        model: "1117",
+        variant: "2WD, Smart",
+        hp: "44",
+        image: mf245Di,
+        priceRange: "₹11.0L",
+        officialSpecs: {
+          engine: "Simpson 3 Cylinder, 2500cc",
+          fuelTank: "55 Litres",
+          liftingCapacity: "1300 kg",
+          pto: "540 RPM",
+          gearBox: "12 F + 3 R Synchro",
+          driveType: "2WD",
+          transmission: "Smart"
+        },
+        keyFeatures: ["Smart Features", "Dynamic Transmission", "2WD Drive"],
+        applications: ["Smart Farming", "Precision Agriculture", "Modern Operations"],
+        useCase: "Modern farming requiring smart features with 2WD efficiency"
+      },
+      {
+        id: 1128,
+        model: "1128",
+        variant: "4WD, Smart",
+        hp: "44",
+        image: mf245Di,
+        priceRange: "₹14.0L",
+        officialSpecs: {
+          engine: "Simpson 3 Cylinder, 2500cc",
+          fuelTank: "55 Litres",
+          liftingCapacity: "1300 kg",
+          pto: "540 RPM",
+          gearBox: "12 F + 3 R Synchro",
+          driveType: "4WD",
+          transmission: "Smart"
+        },
+        keyFeatures: ["4WD Smart", "Advanced Features", "Maximum Performance"],
+        applications: ["Advanced Smart Farming", "Precision 4WD Work", "Premium Operations"],
+        useCase: "Premium smart farming requiring 4WD capabilities",
+        popular: true
+      }
+    ]
+  },
+  {
+    familyName: "MF 244",
+    familyId: "mf-244",
+    baseModel: "MF 244",
+    description: "Standard 44HP tractor with constant mesh transmission options.",
+    mainImage: mf245Di,
+    category: "Mid-Range",
+    priceRange: "₹10.0L - ₹12.0L",
+    seoDescription: "MF 244 tractors with MS CS and PS CS configurations.",
+    variants: [
+      {
+        id: 1092,
+        model: "1092",
+        variant: "MS CS 2WD",
+        hp: "44",
+        image: mf245Di,
+        priceRange: "₹10.0L",
+        officialSpecs: {
+          engine: "Simpson 3 Cylinder, 2500cc",
+          fuelTank: "55 Litres",
+          liftingCapacity: "1300 kg",
+          pto: "540 RPM",
+          gearBox: "12 F + 3 R",
+          driveType: "2WD",
+          transmission: "Manual Constant Mesh"
+        },
+        keyFeatures: ["Manual Steering", "Constant Mesh", "Standard Build"],
+        applications: ["General Farming", "Field Operations", "Standard Work"],
+        useCase: "Standard farming operations with constant mesh transmission"
+      },
+      {
+        id: 1093,
+        model: "1093",
+        variant: "PS CS 2WD",
+        hp: "44",
+        image: mf245Di,
+        priceRange: "₹12.0L",
+        officialSpecs: {
+          engine: "Simpson 3 Cylinder, 2500cc",
+          fuelTank: "55 Litres",
+          liftingCapacity: "1300 kg",
+          pto: "540 RPM",
+          gearBox: "12 F + 3 R",
+          driveType: "2WD",
+          transmission: "Power Steering Constant Mesh"
+        },
+        keyFeatures: ["Power Steering", "Constant Mesh", "Enhanced Comfort"],
+        applications: ["Professional Farming", "Comfort Operations", "Large Fields"],
+        useCase: "Professional operations requiring power steering with constant mesh",
+        popular: true
+      }
+    ]
+  },
+  {
+    familyName: "MF 245 PD 46HP",
+    familyId: "mf-245-pd-46hp",
+    baseModel: "MF 245 PD 46HP",
+    description: "Power Drive 46HP tractor with multiple tire configurations and loading options.",
+    mainImage: mf245Pd46HP,
+    category: "Premium",
+    priceRange: "₹12.0L - ₹16.0L",
+    seoDescription: "MF 245 PD 46HP series with 13.6, 14.9 tire options and front tire variations.",
+    variants: [
+      {
+        id: 1012,
+        model: "1012",
+        variant: "Fully Loaded 13.6, 2WD",
+        hp: "46",
+        image: mf245Pd46HP,
+        priceRange: "₹14.0L",
+        officialSpecs: {
+          engine: "Simpson 4 Cylinder, 2500cc",
+          fuelTank: "60 Litres",
+          liftingCapacity: "1400 kg",
+          pto: "540/750 RPM",
+          gearBox: "12 F + 3 R Synchro",
+          driveType: "2WD",
+          transmission: "Power Drive"
+        },
+        keyFeatures: ["Fully Loaded", "13.6 Tires", "Power Drive"],
+        applications: ["Professional Farming", "Heavy Work", "Commercial Operations"],
+        useCase: "Professional operations requiring fully loaded 13.6 tire configuration",
+        popular: true
+      },
+      {
+        id: 1010,
+        model: "1010",
+        variant: "Basic 13.6 2WD",
+        hp: "46",
+        image: mf245Pd46HP,
+        priceRange: "₹12.0L",
+        officialSpecs: {
+          engine: "Simpson 4 Cylinder, 2500cc",
+          fuelTank: "60 Litres",
+          liftingCapacity: "1400 kg",
+          pto: "540/750 RPM",
+          gearBox: "12 F + 3 R",
+          driveType: "2WD",
+          transmission: "Basic Power Drive"
+        },
+        keyFeatures: ["Basic Configuration", "13.6 Tires", "Economic Operation"],
+        applications: ["General Farming", "Standard Operations", "Cost-Effective Work"],
+        useCase: "Cost-effective farming with basic 13.6 tire setup"
+      },
+      {
+        id: 1021,
+        model: "1021",
+        variant: "Fully Loaded 14.9 2WD",
+        hp: "46",
+        image: mf245Pd46HP,
+        priceRange: "₹15.0L",
+        officialSpecs: {
+          engine: "Simpson 4 Cylinder, 2500cc",
+          fuelTank: "60 Litres",
+          liftingCapacity: "1400 kg",
+          pto: "540/750 RPM",
+          gearBox: "12 F + 3 R Synchro",
+          driveType: "2WD",
+          transmission: "Power Drive"
+        },
+        keyFeatures: ["Fully Loaded", "14.9 Tires", "Enhanced Traction"],
+        applications: ["Heavy Field Work", "Large Implements", "Premium Operations"],
+        useCase: "Premium operations requiring 14.9 tire configuration",
+        popular: true
+      },
+      {
+        id: 1022,
+        model: "1022",
+        variant: "1021 + 7.50X16 FT",
+        hp: "46",
+        image: mf245Pd46HP,
+        priceRange: "₹15.5L",
+        officialSpecs: {
+          engine: "Simpson 4 Cylinder, 2500cc",
+          fuelTank: "60 Litres",
+          liftingCapacity: "1400 kg",
+          pto: "540/750 RPM",
+          gearBox: "12 F + 3 R Synchro",
+          driveType: "2WD",
+          transmission: "Power Drive"
+        },
+        keyFeatures: ["7.50X16 Front Tires", "Enhanced 1021", "Premium Configuration"],
+        applications: ["Heavy Work", "Specialty Operations", "Premium Farming"],
+        useCase: "Premium operations requiring specific front tire configuration"
+      },
+      {
+        id: 1162,
+        model: "1162",
+        variant: "6X16 FT 2WD",
+        hp: "46",
+        image: mf245Pd46HP,
+        priceRange: "₹13.5L",
+        officialSpecs: {
+          engine: "Simpson 4 Cylinder, 2500cc",
+          fuelTank: "60 Litres",
+          liftingCapacity: "1400 kg",
+          pto: "540/750 RPM",
+          gearBox: "12 F + 3 R",
+          driveType: "2WD",
+          transmission: "Power Drive"
+        },
+        keyFeatures: ["6X16 Front Tires", "Specialized Configuration", "Enhanced Performance"],
+        applications: ["Specialty Farming", "Specific Operations", "Custom Work"],
+        useCase: "Operations requiring 6X16 front tire specifications"
+      }
+    ]
+  },
+  {
+    familyName: "MF 246 Dyna",
+    familyId: "mf-246-dyna",
+    baseModel: "MF 246 Dyna",
+    description: "46HP dynamic tractor with multiple steering and drive configurations.",
+    mainImage: mf245Di,
+    category: "Premium",
+    priceRange: "₹11.0L - ₹16.0L",
+    seoDescription: "MF 246 Dyna series with MS, PS, Smart and 4WD options.",
+    variants: [
+      {
+        id: 845,
+        model: "845",
+        variant: "MS 2WD",
+        hp: "46",
+        image: mf245Di,
+        priceRange: "₹11.0L",
+        officialSpecs: {
+          engine: "Simpson 4 Cylinder, 2500cc",
+          fuelTank: "60 Litres",
+          liftingCapacity: "1400 kg",
+          pto: "540/750 RPM",
+          gearBox: "12 F + 3 R Synchro",
+          driveType: "2WD",
+          transmission: "Manual Steering Dynamic"
+        },
+        keyFeatures: ["Manual Steering", "Dynamic Transmission", "46HP Power"],
+        applications: ["General Farming", "Dynamic Operations", "Field Work"],
+        useCase: "Dynamic farming operations with manual steering preference"
+      },
+      {
+        id: 1088,
+        model: "1088",
+        variant: "PS 2WD",
+        hp: "46",
+        image: mf245Di,
+        priceRange: "₹13.0L",
+        officialSpecs: {
+          engine: "Simpson 4 Cylinder, 2500cc",
+          fuelTank: "60 Litres",
+          liftingCapacity: "1400 kg",
+          pto: "540/750 RPM",
+          gearBox: "12 F + 3 R Synchro",
+          driveType: "2WD",
+          transmission: "Power Steering Dynamic"
+        },
+        keyFeatures: ["Power Steering", "Dynamic Transmission", "Enhanced Comfort"],
+        applications: ["Professional Farming", "Comfort Operations", "Large Fields"],
+        useCase: "Professional dynamic operations requiring power steering",
+        popular: true
+      },
+      {
+        id: 1118,
+        model: "1118",
+        variant: "2WD, Smart 2WD",
+        hp: "46",
+        image: mf245Di,
+        priceRange: "₹12.5L",
+        officialSpecs: {
+          engine: "Simpson 4 Cylinder, 2500cc",
+          fuelTank: "60 Litres",
+          liftingCapacity: "1400 kg",
+          pto: "540/750 RPM",
+          gearBox: "12 F + 3 R Synchro",
+          driveType: "2WD",
+          transmission: "Smart Dynamic"
+        },
+        keyFeatures: ["Smart Features", "Dynamic Transmission", "2WD Efficiency"],
+        applications: ["Smart Farming", "Precision Agriculture", "Modern Operations"],
+        useCase: "Smart dynamic farming with 2WD efficiency"
+      },
+      {
+        id: 962,
+        model: "962",
+        variant: "4WD",
+        hp: "46",
+        image: mf245Di,
+        priceRange: "₹16.0L",
+        officialSpecs: {
+          engine: "Simpson 4 Cylinder, 2500cc",
+          fuelTank: "60 Litres",
+          liftingCapacity: "1400 kg",
+          pto: "540/750 RPM",
+          gearBox: "12 F + 3 R Synchro",
+          driveType: "4WD",
+          transmission: "Dynamic 4WD"
+        },
+        keyFeatures: ["4WD Drive", "Dynamic Transmission", "Maximum Traction"],
+        applications: ["Heavy Terrain", "Slope Farming", "Advanced 4WD Work"],
+        useCase: "Dynamic 4WD operations requiring maximum traction",
+        popular: true
+      },
+      {
+        id: 1129,
+        model: "1129",
+        variant: "2WD, Smart 4WD",
+        hp: "46",
+        image: mf245Di,
+        priceRange: "₹15.5L",
+        officialSpecs: {
+          engine: "Simpson 4 Cylinder, 2500cc",
+          fuelTank: "60 Litres",
+          liftingCapacity: "1400 kg",
+          pto: "540/750 RPM",
+          gearBox: "12 F + 3 R Synchro",
+          driveType: "4WD",
+          transmission: "Smart Dynamic 4WD"
+        },
+        keyFeatures: ["Smart 4WD", "Dynamic Transmission", "Advanced Features"],
+        applications: ["Advanced Smart Farming", "Precision 4WD Work", "Premium Operations"],
+        useCase: "Premium smart dynamic operations with 4WD capabilities",
+        popular: true
+      }
+    ]
+  },
+  {
+    familyName: "MF 7250 Power",
+    familyId: "mf-7250-power",
+    baseModel: "MF 7250 Power",
+    description: "High-power 50HP tractor series with multiple tire and transmission configurations.",
+    mainImage: mf7250DiPowerUp,
+    category: "Premium",
+    priceRange: "₹13.0L - ₹18.0L",
+    seoDescription: "MF 7250 Power series with 13.6, 14.9 tire options and RPTO configurations.",
+    variants: [
+      {
+        id: 1077,
+        model: "1077",
+        variant: "13.6 MS 2WD",
+        hp: "50",
+        image: mf7250DiPowerUp,
+        priceRange: "₹13.0L",
+        officialSpecs: {
+          engine: "Perkins 4 Cylinder, 2500cc",
+          fuelTank: "65 Litres",
+          liftingCapacity: "1600 kg",
+          pto: "540/750 RPM",
+          gearBox: "16 F + 16 R",
+          driveType: "2WD",
+          transmission: "Manual Steering"
+        },
+        keyFeatures: ["13.6 Tires", "Manual Steering", "50HP Power"],
+        applications: ["Heavy Field Work", "Large Implements", "Commercial Farming"],
+        useCase: "Commercial farming with 13.6 tire configuration and manual steering"
+      },
+      {
+        id: 1075,
+        model: "1075",
+        variant: "14.9 MS 2WD",
+        hp: "50",
+        image: mf7250DiPowerUp,
+        priceRange: "₹14.0L",
+        officialSpecs: {
+          engine: "Perkins 4 Cylinder, 2500cc",
+          fuelTank: "65 Litres",
+          liftingCapacity: "1600 kg",
+          pto: "540/750 RPM",
+          gearBox: "16 F + 16 R",
+          driveType: "2WD",
+          transmission: "Manual Steering"
+        },
+        keyFeatures: ["14.9 Tires", "Manual Steering", "Enhanced Traction"],
+        applications: ["Heavy Terrain", "Large Field Operations", "Commercial Work"],
+        useCase: "Commercial operations requiring 14.9 tire configuration",
+        popular: true
+      },
+      {
+        id: 1078,
+        model: "1078",
+        variant: "PS RPTO 14.9 2WD",
+        hp: "50",
+        image: mf7250DiPowerUp,
+        priceRange: "₹16.0L",
+        officialSpecs: {
+          engine: "Perkins 4 Cylinder, 2500cc",
+          fuelTank: "65 Litres",
+          liftingCapacity: "1600 kg",
+          pto: "540/750/1000 RPM",
+          gearBox: "16 F + 16 R",
+          driveType: "2WD",
+          transmission: "Power Steering RPTO"
+        },
+        keyFeatures: ["Power Steering", "RPTO", "14.9 Tires"],
+        applications: ["Professional Farming", "RPTO Operations", "Premium Work"],
+        useCase: "Professional operations requiring power steering and RPTO",
+        popular: true
+      },
+      {
+        id: 1080,
+        model: "1080",
+        variant: "1076 + 7.50X16 FT 2WD",
+        hp: "50",
+        image: mf7250DiPowerUp,
+        priceRange: "₹15.0L",
+        officialSpecs: {
+          engine: "Perkins 4 Cylinder, 2500cc",
+          fuelTank: "65 Litres",
+          liftingCapacity: "1600 kg",
+          pto: "540/750 RPM",
+          gearBox: "16 F + 16 R",
+          driveType: "2WD",
+          transmission: "Enhanced"
+        },
+        keyFeatures: ["7.50X16 Front Tires", "Enhanced Configuration", "50HP Power"],
+        applications: ["Specialty Operations", "Custom Work", "Enhanced Performance"],
+        useCase: "Operations requiring specific 7.50X16 front tire configuration"
+      },
+      {
+        id: 1188,
+        model: "1188",
+        variant: "Base 1081, BSS 2WD",
+        hp: "50",
+        image: mf7250DiPowerUp,
+        priceRange: "₹18.0L",
+        officialSpecs: {
+          engine: "Perkins 4 Cylinder, 2500cc",
+          fuelTank: "65 Litres",
+          liftingCapacity: "1600 kg",
+          pto: "540/750/1000 RPM",
+          gearBox: "16 F + 16 R Synchro",
+          driveType: "2WD",
+          transmission: "BSS Enhanced"
+        },
+        keyFeatures: ["BSS Configuration", "Enhanced Base", "Premium Features"],
+        applications: ["Premium Farming", "Advanced Operations", "Professional Work"],
+        useCase: "Premium operations requiring BSS enhanced configuration",
+        popular: true
+      }
+    ]
+  },
+  {
+    familyName: "MF 245 -50 HP / MF 245",
+    familyId: "mf-245-50hp",
+    baseModel: "MF 245",
+    description: "Standard 50HP tractor series with reliable performance for various applications.",
+    mainImage: mf245Di,
+    category: "Mid-Range",
+    priceRange: "₹11.0L - ₹13.0L",
+    seoDescription: "MF 245 50HP tractors with standard 2WD configuration.",
+    variants: [
+      {
+        id: 670,
+        model: "670",
+        variant: "2WD",
+        hp: "50",
+        image: mf245Di,
+        priceRange: "₹11.0L",
+        officialSpecs: {
+          engine: "Simpson 4 Cylinder, 2500cc",
+          fuelTank: "60 Litres",
+          liftingCapacity: "1500 kg",
+          pto: "540/750 RPM",
+          gearBox: "12 F + 3 R",
+          driveType: "2WD",
+          transmission: "Standard"
+        },
+        keyFeatures: ["Standard Configuration", "50HP Power", "Reliable Performance"],
+        applications: ["General Farming", "Field Operations", "Medium Scale Work"],
+        useCase: "Standard farming operations requiring reliable 50HP performance"
+      },
+      {
+        id: 762,
+        model: "762",
+        variant: "2WD",
+        hp: "50",
+        image: mf245Di,
+        priceRange: "₹13.0L",
+        officialSpecs: {
+          engine: "Simpson 4 Cylinder, 2500cc",
+          fuelTank: "60 Litres",
+          liftingCapacity: "1500 kg",
+          pto: "540/750 RPM",
+          gearBox: "12 F + 3 R",
+          driveType: "2WD",
+          transmission: "Enhanced Standard"
+        },
+        keyFeatures: ["Enhanced Features", "50HP Power", "Improved Performance"],
+        applications: ["Professional Farming", "Enhanced Operations", "Commercial Work"],
+        useCase: "Enhanced standard farming requiring improved performance",
+        popular: true
+      }
+    ]
+  },
+  {
+    familyName: "MF 245 PD- 50 HP / MF 245 PD",
+    familyId: "mf-245-pd-50hp",
+    baseModel: "MF 245 PD",
+    description: "Power Drive 50HP tractor with Eagle series configurations and enhanced features.",
+    mainImage: mf245Di,
+    category: "Premium",
+    priceRange: "₹14.0L - ₹16.0L",
+    seoDescription: "MF 245 PD 50HP with Eagle PS configurations and clevis pin options.",
+    variants: [
+      {
+        id: 948,
+        model: "948",
+        variant: "Eagle PS 2WD",
+        hp: "50",
+        image: mf245Di,
+        priceRange: "₹14.0L",
+        officialSpecs: {
+          engine: "Simpson 4 Cylinder, 2500cc",
+          fuelTank: "60 Litres",
+          liftingCapacity: "1500 kg",
+          pto: "540/750 RPM",
+          gearBox: "12 F + 3 R Synchro",
+          driveType: "2WD",
+          transmission: "Eagle Power Steering"
+        },
+        keyFeatures: ["Eagle Power Steering", "Power Drive", "50HP Performance"],
+        applications: ["Professional Farming", "Eagle Series Work", "Premium Operations"],
+        useCase: "Professional Eagle series operations with power steering",
+        popular: true
+      },
+      {
+        id: 1157,
+        model: "1157",
+        variant: "Eagle PS + Clevis Pin 2WD",
+        hp: "50",
+        image: mf245Di,
+        priceRange: "₹16.0L",
+        officialSpecs: {
+          engine: "Simpson 4 Cylinder, 2500cc",
+          fuelTank: "60 Litres",
+          liftingCapacity: "1500 kg",
+          pto: "540/750 RPM",
+          gearBox: "12 F + 3 R Synchro",
+          driveType: "2WD",
+          transmission: "Eagle PS Enhanced"
+        },
+        keyFeatures: ["Eagle PS", "Clevis Pin", "Premium Configuration"],
+        applications: ["Premium Farming", "Specialized Work", "Professional Operations"],
+        useCase: "Premium Eagle operations requiring clevis pin configuration",
+        popular: true
+      }
+    ]
+  },
+  {
+    familyName: "MF 5245 PD",
+    familyId: "mf-5245-pd",
+    baseModel: "MF 5245 PD",
+    description: "Power Drive 45HP compact tractor with 4WD capabilities for professional use.",
+    mainImage: mf5225,
+    category: "Compact Pro",
+    priceRange: "₹15.0L - ₹17.0L",
+    seoDescription: "MF 5245 PD with 4WD drive for professional compact farming operations.",
+    variants: [
+      {
+        id: 751,
+        model: "751",
+        variant: "4WD",
+        hp: "45",
+        image: mf5225,
+        priceRange: "₹17.0L",
+        officialSpecs: {
+          engine: "Perkins 4 Cylinder, 2500cc",
+          fuelTank: "60 Litres",
+          liftingCapacity: "1400 kg",
+          pto: "540/750 RPM",
+          gearBox: "12 F + 3 R Synchro",
+          driveType: "4WD",
+          transmission: "Power Drive"
+        },
+        keyFeatures: ["4WD Drive", "Power Drive", "Compact Professional"],
+        applications: ["Professional Compact Farming", "4WD Operations", "Premium Compact Work"],
+        useCase: "Professional compact operations requiring 4WD capabilities",
+        popular: true
+      }
+    ]
+  },
+  {
+    familyName: "7250 Power Up",
+    familyId: "7250-power-up",
+    baseModel: "7250 Power Up",
+    description: "Enhanced 50HP Power Up series with multiple tire and pump configurations.",
+    mainImage: mf7250DiPowerUp,
+    category: "Premium",
+    priceRange: "₹15.0L - ₹19.0L",
+    seoDescription: "7250 Power Up series with 14.9, 13.6 tire options and tandem pump features.",
+    variants: [
+      {
+        id: 858,
+        model: "858",
+        variant: "14.9 PS 2WD",
+        hp: "50",
+        image: mf7250DiPowerUp,
+        priceRange: "₹16.0L",
+        officialSpecs: {
+          engine: "Perkins 4 Cylinder Turbo, 2500cc",
+          fuelTank: "70 Litres",
+          liftingCapacity: "1800 kg",
+          pto: "540/750/1000 RPM",
+          gearBox: "16 F + 16 R",
+          driveType: "2WD",
+          transmission: "Power Steering"
+        },
+        keyFeatures: ["14.9 Tires", "Power Steering", "Power Up Features"],
+        applications: ["Heavy Field Work", "Large Implements", "Commercial Operations"],
+        useCase: "Commercial operations requiring 14.9 tire configuration with power steering",
+        popular: true
+      },
+      {
+        id: 940,
+        model: "940",
+        variant: "858 + 7.50X16 FT 2WD",
+        hp: "50",
+        image: mf7250DiPowerUp,
+        priceRange: "₹17.0L",
+        officialSpecs: {
+          engine: "Perkins 4 Cylinder Turbo, 2500cc",
+          fuelTank: "70 Litres",
+          liftingCapacity: "1800 kg",
+          pto: "540/750/1000 RPM",
+          gearBox: "16 F + 16 R",
+          driveType: "2WD",
+          transmission: "Power Steering"
+        },
+        keyFeatures: ["7.50X16 Front Tires", "Enhanced 858", "Power Up"],
+        applications: ["Specialty Operations", "Custom Front Tire Work", "Premium Farming"],
+        useCase: "Premium operations requiring specific 7.50X16 front tire setup"
+      },
+      {
+        id: 914,
+        model: "914",
+        variant: "14.9 MS 2WD",
+        hp: "50",
+        image: mf7250DiPowerUp,
+        priceRange: "₹15.0L",
+        officialSpecs: {
+          engine: "Perkins 4 Cylinder Turbo, 2500cc",
+          fuelTank: "70 Litres",
+          liftingCapacity: "1800 kg",
+          pto: "540/750/1000 RPM",
+          gearBox: "16 F + 16 R",
+          driveType: "2WD",
+          transmission: "Manual Steering"
+        },
+        keyFeatures: ["14.9 Tires", "Manual Steering", "Power Up Features"],
+        applications: ["Heavy Field Work", "Large Operations", "Commercial Farming"],
+        useCase: "Commercial farming with 14.9 tires and manual steering preference"
+      },
+      {
+        id: 915,
+        model: "915",
+        variant: "13.6 PS 2WD",
+        hp: "50",
+        image: mf7250DiPowerUp,
+        priceRange: "₹16.5L",
+        officialSpecs: {
+          engine: "Perkins 4 Cylinder Turbo, 2500cc",
+          fuelTank: "70 Litres",
+          liftingCapacity: "1800 kg",
+          pto: "540/750/1000 RPM",
+          gearBox: "16 F + 16 R",
+          driveType: "2WD",
+          transmission: "Power Steering"
+        },
+        keyFeatures: ["13.6 Tires", "Power Steering", "Power Up Features"],
+        applications: ["Professional Farming", "Enhanced Operations", "Premium Work"],
+        useCase: "Professional operations with 13.6 tire configuration and power steering"
+      },
+      {
+        id: 917,
+        model: "917",
+        variant: "Tandem pump 2WD",
+        hp: "50",
+        image: mf7250DiPowerUp,
+        priceRange: "₹19.0L",
+        officialSpecs: {
+          engine: "Perkins 4 Cylinder Turbo, 2500cc",
+          fuelTank: "70 Litres",
+          liftingCapacity: "1800 kg",
+          pto: "540/750/1000 RPM",
+          gearBox: "16 F + 16 R",
+          driveType: "2WD",
+          transmission: "Tandem Pump"
+        },
+        keyFeatures: ["Tandem Pump", "Power Up Features", "Enhanced Hydraulics"],
+        applications: ["Heavy Hydraulic Work", "Multiple Implement Operations", "Professional Farming"],
+        useCase: "Professional operations requiring tandem pump hydraulic capabilities",
+        popular: true
+      }
+    ]
+  },
+  {
+    familyName: "MF 9500E",
+    familyId: "mf-9500e",
+    baseModel: "MF 9500E",
+    description: "Enhanced 85HP high-power tractor with multiple tire configurations for large-scale operations.",
+    mainImage: mf9500PS,
+    category: "High Power",
+    priceRange: "₹20.0L - ₹25.0L",
+    seoDescription: "MF 9500E enhanced tractors with 14.9 and 16.9 tire options for commercial farming.",
+    variants: [
+      {
+        id: 980,
+        model: "980",
+        variant: "14.9 2WD",
+        hp: "85",
+        image: mf9500PS,
+        priceRange: "₹20.0L",
+        officialSpecs: {
+          engine: "Perkins 6 Cylinder Turbo, 4400cc",
+          fuelTank: "120 Litres",
+          liftingCapacity: "3500 kg",
+          pto: "540/750/1000 RPM",
+          gearBox: "16 F + 16 R Synchro",
+          driveType: "2WD",
+          transmission: "Enhanced"
+        },
+        keyFeatures: ["85HP Power", "14.9 Tires", "Enhanced Features"],
+        applications: ["Large Scale Farming", "Heavy Implements", "Commercial Operations"],
+        useCase: "Large-scale commercial farming with 14.9 tire configuration",
+        popular: true
+      },
+      {
+        id: 981,
+        model: "981",
+        variant: "16.9 2WD",
+        hp: "85",
+        image: mf9500PS,
+        priceRange: "₹25.0L",
+        officialSpecs: {
+          engine: "Perkins 6 Cylinder Turbo, 4400cc",
+          fuelTank: "120 Litres",
+          liftingCapacity: "3500 kg",
+          pto: "540/750/1000 RPM",
+          gearBox: "16 F + 16 R Synchro",
+          driveType: "2WD",
+          transmission: "Enhanced"
+        },
+        keyFeatures: ["85HP Power", "16.9 Tires", "Maximum Traction"],
+        applications: ["Heavy Terrain", "Large Implements", "Maximum Performance"],
+        useCase: "Heavy-duty operations requiring 16.9 tire configuration and maximum performance",
+        popular: true
+      }
+    ]
+  },
+  {
+    familyName: "MF 254 Dyna",
+    familyId: "mf-254-dyna",
+    baseModel: "MF 254 Dyna",
+    description: "54HP dynamic tractor with multiple width and drive configurations including smart features.",
+    mainImage: mf245Di,
+    category: "Mid-Range",
+    priceRange: "₹12.0L - ₹18.0L",
+    seoDescription: "MF 254 Dyna series with 2WD, 4WD, Smart and various width options.",
+    variants: [
+      {
+        id: 847,
+        model: "847",
+        variant: "2WD",
+        hp: "54",
+        image: mf245Di,
+        priceRange: "₹12.0L",
+        officialSpecs: {
+          engine: "Simpson 4 Cylinder, 2800cc",
+          fuelTank: "65 Litres",
+          liftingCapacity: "1500 kg",
+          pto: "540/750 RPM",
+          gearBox: "12 F + 3 R Synchro",
+          driveType: "2WD",
+          transmission: "Dynamic"
+        },
+        keyFeatures: ["54HP Power", "Dynamic Transmission", "2WD Drive"],
+        applications: ["General Farming", "Field Operations", "Medium Scale Work"],
+        useCase: "General farming operations with dynamic transmission"
+      },
+      {
+        id: 1232,
+        model: "1232",
+        variant: "7.5FT 2WD",
+        hp: "54",
+        image: mf245Di,
+        priceRange: "₹13.0L",
+        officialSpecs: {
+          engine: "Simpson 4 Cylinder, 2800cc",
+          fuelTank: "65 Litres",
+          liftingCapacity: "1500 kg",
+          pto: "540/750 RPM",
+          gearBox: "12 F + 3 R Synchro",
+          driveType: "2WD",
+          transmission: "Dynamic"
+        },
+        keyFeatures: ["7.5FT Width", "Dynamic Transmission", "Narrow Operation"],
+        applications: ["Row Crop", "Narrow Field Work", "Precision Farming"],
+        useCase: "Operations requiring 7.5FT width for narrow field work"
+      },
+      {
+        id: 1211,
+        model: "1211",
+        variant: "7.5FT 2WD",
+        hp: "54",
+        image: mf245Di,
+        priceRange: "₹13.5L",
+        officialSpecs: {
+          engine: "Simpson 4 Cylinder, 2800cc",
+          fuelTank: "65 Litres",
+          liftingCapacity: "1500 kg",
+          pto: "540/750 RPM",
+          gearBox: "12 F + 3 R Synchro",
+          driveType: "2WD",
+          transmission: "Dynamic Enhanced"
+        },
+        keyFeatures: ["7.5FT Width", "Enhanced Dynamic", "Improved Features"],
+        applications: ["Enhanced Row Crop", "Precision Work", "Professional Farming"],
+        useCase: "Enhanced operations requiring 7.5FT width with improved features"
+      },
+      {
+        id: 1120,
+        model: "1120",
+        variant: "2WD, Smart",
+        hp: "54",
+        image: mf245Di,
+        priceRange: "₹15.0L",
+        officialSpecs: {
+          engine: "Simpson 4 Cylinder, 2800cc",
+          fuelTank: "65 Litres",
+          liftingCapacity: "1500 kg",
+          pto: "540/750 RPM",
+          gearBox: "12 F + 3 R Synchro",
+          driveType: "2WD",
+          transmission: "Smart Dynamic"
+        },
+        keyFeatures: ["Smart Features", "Dynamic Transmission", "Advanced Technology"],
+        applications: ["Smart Farming", "Precision Agriculture", "Advanced Operations"],
+        useCase: "Smart farming operations with advanced technology features",
+        popular: true
+      },
+      {
+        id: 1058,
+        model: "1058",
+        variant: "4WD",
+        hp: "54",
+        image: mf245Di,
+        priceRange: "₹18.0L",
+        officialSpecs: {
+          engine: "Simpson 4 Cylinder, 2800cc",
+          fuelTank: "65 Litres",
+          liftingCapacity: "1500 kg",
+          pto: "540/750 RPM",
+          gearBox: "12 F + 3 R Synchro",
+          driveType: "4WD",
+          transmission: "Dynamic 4WD"
+        },
+        keyFeatures: ["4WD Drive", "Dynamic Transmission", "Maximum Traction"],
+        applications: ["Heavy Terrain", "Slope Farming", "4WD Operations"],
+        useCase: "Operations requiring 4WD traction with dynamic transmission",
+        popular: true
+      },
+      {
+        id: 1141,
+        model: "1141",
+        variant: "4WD",
+        hp: "54",
+        image: mf245Di,
+        priceRange: "₹17.5L",
+        officialSpecs: {
+          engine: "Simpson 4 Cylinder, 2800cc",
+          fuelTank: "65 Litres",
+          liftingCapacity: "1500 kg",
+          pto: "540/750 RPM",
+          gearBox: "12 F + 3 R Synchro",
+          driveType: "4WD",
+          transmission: "Dynamic 4WD"
+        },
+        keyFeatures: ["4WD Drive", "Enhanced Dynamic", "Professional Features"],
+        applications: ["Professional 4WD Work", "Heavy Operations", "Enhanced Farming"],
+        useCase: "Professional 4WD operations with enhanced dynamic features"
+      }
+    ]
+  },
+  {
+    familyName: "MF 8055 Magnatrak",
+    familyId: "mf-8055-magnatrak",
+    baseModel: "MF 8055 Magnatrak",
+    description: "High-power 80HP Magnatrak series with advanced tire configurations for heavy-duty operations.",
+    mainImage: mf9500PS,
+    category: "High Power",
+    priceRange: "₹22.0L - ₹28.0L",
+    seoDescription: "MF 8055 Magnatrak with 14.9 and 16.9 tire options for heavy commercial farming.",
+    variants: [
+      {
+        id: 1094,
+        model: "1094",
+        variant: "14.9 2WD",
+        hp: "80",
+        image: mf9500PS,
+        priceRange: "₹22.0L",
+        officialSpecs: {
+          engine: "Perkins 6 Cylinder Turbo, 4000cc",
+          fuelTank: "110 Litres",
+          liftingCapacity: "3200 kg",
+          pto: "540/750/1000 RPM",
+          gearBox: "16 F + 16 R Synchro",
+          driveType: "2WD",
+          transmission: "Magnatrak"
+        },
+        keyFeatures: ["80HP Power", "14.9 Tires", "Magnatrak Features"],
+        applications: ["Heavy Commercial Farming", "Large Implements", "High Power Operations"],
+        useCase: "Heavy commercial operations requiring 80HP power with 14.9 tires",
+        popular: true
+      },
+      {
+        id: 1190,
+        model: "1190",
+        variant: "16.9 2WD",
+        hp: "80",
+        image: mf9500PS,
+        priceRange: "₹28.0L",
+        officialSpecs: {
+          engine: "Perkins 6 Cylinder Turbo, 4000cc",
+          fuelTank: "110 Litres",
+          liftingCapacity: "3200 kg",
+          pto: "540/750/1000 RPM",
+          gearBox: "16 F + 16 R Synchro",
+          driveType: "2WD",
+          transmission: "Magnatrak"
+        },
+        keyFeatures: ["80HP Power", "16.9 Tires", "Maximum Traction"],
+        applications: ["Maximum Power Operations", "Heavy Terrain", "Large Scale Farming"],
+        useCase: "Maximum power operations requiring 16.9 tire configuration",
+        popular: true
+      }
+    ]
+  },
+  {
+    familyName: "MF 9563",
+    familyId: "mf-9563",
+    baseModel: "MF 9563",
+    description: "High-performance 95HP tractor with multiple transmission and shuttle configurations.",
+    mainImage: mf9563,
+    category: "High Power",
+    priceRange: "₹25.0L - ₹32.0L",
+    seoDescription: "MF 9563 with 8x8 Super Shuttle, 12x4 and IPTO configurations for maximum performance.",
+    variants: [
+      {
+        id: 1208,
+        model: "1208",
+        variant: "2WD 8X8 SUPER SHUTTLE",
+        hp: "95",
+        image: mf9563,
+        priceRange: "₹28.0L",
+        officialSpecs: {
+          engine: "Perkins 6 Cylinder Turbo, 4400cc",
+          fuelTank: "130 Litres",
+          liftingCapacity: "4000 kg",
+          pto: "540/750/1000 RPM",
+          gearBox: "8 F + 8 R Super Shuttle",
+          driveType: "2WD",
+          transmission: "Super Shuttle"
+        },
+        keyFeatures: ["95HP Power", "8x8 Super Shuttle", "High Performance"],
+        applications: ["High Performance Farming", "Multiple Operations", "Commercial Work"],
+        useCase: "High-performance operations requiring super shuttle transmission",
+        popular: true
+      },
+      {
+        id: 1207,
+        model: "1207",
+        variant: "2WD 12X4",
+        hp: "95",
+        image: mf9563,
+        priceRange: "₹25.0L",
+        officialSpecs: {
+          engine: "Perkins 6 Cylinder Turbo, 4400cc",
+          fuelTank: "130 Litres",
+          liftingCapacity: "4000 kg",
+          pto: "540/750/1000 RPM",
+          gearBox: "12 F + 4 R",
+          driveType: "2WD",
+          transmission: "Standard"
+        },
+        keyFeatures: ["95HP Power", "12x4 Transmission", "Standard Configuration"],
+        applications: ["Large Scale Farming", "Heavy Work", "Commercial Operations"],
+        useCase: "Large-scale commercial farming with 12x4 transmission"
+      },
+      {
+        id: 1210,
+        model: "1210",
+        variant: "2WD 12X4 IPTO",
+        hp: "95",
+        image: mf9563,
+        priceRange: "₹27.0L",
+        officialSpecs: {
+          engine: "Perkins 6 Cylinder Turbo, 4400cc",
+          fuelTank: "130 Litres",
+          liftingCapacity: "4000 kg",
+          pto: "540/750/1000 RPM IPTO",
+          gearBox: "12 F + 4 R",
+          driveType: "2WD",
+          transmission: "IPTO"
+        },
+        keyFeatures: ["95HP Power", "IPTO", "12x4 Transmission"],
+        applications: ["IPTO Operations", "Professional Farming", "Advanced Work"],
+        useCase: "Professional operations requiring IPTO capabilities",
+        popular: true
+      },
+      {
+        id: 1209,
+        model: "1209",
+        variant: "4WD 12X4",
+        hp: "95",
+        image: mf9563,
+        priceRange: "₹30.0L",
+        officialSpecs: {
+          engine: "Perkins 6 Cylinder Turbo, 4400cc",
+          fuelTank: "130 Litres",
+          liftingCapacity: "4000 kg",
+          pto: "540/750/1000 RPM",
+          gearBox: "12 F + 4 R",
+          driveType: "4WD",
+          transmission: "4WD"
+        },
+        keyFeatures: ["95HP Power", "4WD Drive", "12x4 Transmission"],
+        applications: ["Heavy 4WD Work", "Maximum Traction", "Large Operations"],
+        useCase: "Heavy operations requiring 4WD traction with 95HP power",
+        popular: true
+      },
+      {
+        id: 1229,
+        model: "1229",
+        variant: "4WD 12X4 IPTO",
+        hp: "95",
+        image: mf9563,
+        priceRange: "₹32.0L",
+        officialSpecs: {
+          engine: "Perkins 6 Cylinder Turbo, 4400cc",
+          fuelTank: "130 Litres",
+          liftingCapacity: "4000 kg",
+          pto: "540/750/1000 RPM IPTO",
+          gearBox: "12 F + 4 R",
+          driveType: "4WD",
+          transmission: "4WD IPTO"
+        },
+        keyFeatures: ["95HP Power", "4WD IPTO", "Maximum Features"],
+        applications: ["Maximum Performance", "Professional 4WD Work", "Premium Operations"],
+        useCase: "Premium operations requiring 4WD and IPTO capabilities",
+        popular: true
+      },
+      {
+        id: 1230,
+        model: "1230",
+        variant: "4WD SUPER SHUTTLE",
+        hp: "95",
+        image: mf9563,
+        priceRange: "₹31.0L",
+        officialSpecs: {
+          engine: "Perkins 6 Cylinder Turbo, 4400cc",
+          fuelTank: "130 Litres",
+          liftingCapacity: "4000 kg",
+          pto: "540/750/1000 RPM",
+          gearBox: "Super Shuttle",
+          driveType: "4WD",
+          transmission: "4WD Super Shuttle"
+        },
+        keyFeatures: ["95HP Power", "4WD Super Shuttle", "Premium Performance"],
+        applications: ["Premium 4WD Operations", "Maximum Performance", "Professional Work"],
+        useCase: "Premium operations requiring 4WD super shuttle capabilities",
+        popular: true
+      }
+    ]
+  },
+  {
+    familyName: "MF 9500",
+    familyId: "mf-9500",
+    baseModel: "MF 9500",
+    description: "Smart technology 90HP tractor series with 2WD and 4WD smart configurations.",
+    mainImage: mf9500Smart,
+    category: "High Power",
+    priceRange: "₹24.0L - ₹28.0L",
+    seoDescription: "MF 9500 smart tractors with 2WD and 4WD smart technology for modern farming.",
+    variants: [
+      {
+        id: 1194,
+        model: "1194",
+        variant: "9500 2WD SMART",
+        hp: "90",
+        image: mf9500Smart,
+        priceRange: "₹24.0L",
+        officialSpecs: {
+          engine: "Perkins 6 Cylinder Turbo, 4400cc",
+          fuelTank: "125 Litres",
+          liftingCapacity: "3800 kg",
+          pto: "540/750/1000 RPM",
+          gearBox: "16 F + 16 R Smart",
+          driveType: "2WD",
+          transmission: "Smart Technology"
+        },
+        keyFeatures: ["90HP Power", "Smart Technology", "2WD Efficiency"],
+        applications: ["Smart Farming", "Precision Agriculture", "Modern Operations"],
+        useCase: "Modern smart farming operations with 2WD efficiency",
+        popular: true
+      },
+      {
+        id: 1195,
+        model: "1195",
+        variant: "9500 4WD SMART",
+        hp: "90",
+        image: mf9500Smart,
+        priceRange: "₹28.0L",
+        officialSpecs: {
+          engine: "Perkins 6 Cylinder Turbo, 4400cc",
+          fuelTank: "125 Litres",
+          liftingCapacity: "3800 kg",
+          pto: "540/750/1000 RPM",
+          gearBox: "16 F + 16 R Smart",
+          driveType: "4WD",
+          transmission: "Smart 4WD Technology"
+        },
+        keyFeatures: ["90HP Power", "Smart 4WD", "Advanced Technology"],
+        applications: ["Advanced Smart Farming", "Precision 4WD Work", "Premium Operations"],
+        useCase: "Premium smart farming operations requiring 4WD capabilities",
+        popular: true
+      }
+    ]
   }
 ];
 
