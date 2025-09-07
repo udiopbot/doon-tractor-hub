@@ -11,15 +11,9 @@ import TractorFamilyDetails from "@/components/TractorFamilyDetails";
 import SEOHead from "@/components/SEOHead";
 import { 
   tractorFamilies, 
-  implementsDatabase, 
-  getHPRanges, 
-  getDriveTypes, 
-  getTransmissionTypes, 
-  getModelFamilies,
-  filterTractorsByHP,
-  type TractorFamily,
-  type TractorModel
-} from "@/data/newTractorDatabase";
+  implementsDatabase,
+  TractorFamily
+} from "@/data/simpleNewTractorData";
 
 const TractorCatalog = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -28,15 +22,12 @@ const TractorCatalog = () => {
   const [viewMode, setViewMode] = useState<'families' | 'details'>('families');
   const [selectedFamily, setSelectedFamily] = useState<TractorFamily | null>(null);
 
-  // Group tractors by families
-  const tractorFamilies = useMemo(() => groupTractorsByFamily(allTractorData), []);
-
   // Filter families based on search and filters
   const filteredFamilies = useMemo(() => {
     return tractorFamilies.filter(family => {
       const matchesSearch = searchTerm === '' || 
         family.familyName.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        family.variants.some(v => v.model.toLowerCase().includes(searchTerm.toLowerCase()));
+        family.variants.some(v => v.variant.toLowerCase().includes(searchTerm.toLowerCase()));
       
       const matchesCategory = selectedCategory === 'all' || family.category === selectedCategory;
       
@@ -53,7 +44,7 @@ const TractorCatalog = () => {
 
       return matchesSearch && matchesCategory && matchesHp;
     });
-  }, [tractorFamilies, searchTerm, selectedCategory, selectedHpRange]);
+  }, [searchTerm, selectedCategory, selectedHpRange]);
 
   const handleViewDetails = (family: TractorFamily) => {
     setSelectedFamily(family);
@@ -74,7 +65,7 @@ const TractorCatalog = () => {
       <>
         <SEOHead 
           title={`${selectedFamily.familyName} Series - Massey Ferguson Tractors | Doon Motors`}
-          description={selectedFamily.seoDescription}
+          description={selectedFamily.description}
           keywords={`${selectedFamily.familyName}, Massey Ferguson, tractor variants, specifications, Doon Motors`}
         />
         <div className="min-h-screen bg-background">
@@ -142,8 +133,8 @@ const TractorCatalog = () => {
                   </SelectTrigger>
                   <SelectContent className="bg-background border shadow-lg">
                     <SelectItem value="all">All Categories</SelectItem>
-                    {categories.map(category => (
-                      <SelectItem key={category} value={category}>{category}</SelectItem>
+                    {categories.map((category, index) => (
+                      <SelectItem key={index} value={category}>{category}</SelectItem>
                     ))}
                   </SelectContent>
                 </Select>

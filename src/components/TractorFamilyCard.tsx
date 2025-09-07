@@ -2,7 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Eye, Phone } from "lucide-react";
-import { TractorFamily } from "@/types/TractorTypes";
+import { TractorFamily } from "@/data/simpleNewTractorData";
 
 interface TractorFamilyCardProps {
   family: TractorFamily;
@@ -29,7 +29,7 @@ const TractorFamilyCard = ({ family, onViewDetails }: TractorFamilyCardProps) =>
         />
         <div className="absolute top-4 right-4">
           <Badge className="bg-accent text-accent-foreground">
-            {popularVariant.hp}
+            {popularVariant.hp} HP
           </Badge>
         </div>
         <div className="absolute top-4 left-4">

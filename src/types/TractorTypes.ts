@@ -1,28 +1,32 @@
-import { TractorSpecs } from "@/data/tractorDatabase";
-
-export interface TractorVariant {
+// Update types to match new database structure
+export interface TractorModel {
   id: number;
-  model: string;
+  modelNumber: number;
   variant: string;
-  hp: string;
+  driveType: '2WD' | '4WD';
+  hp: number;
+  transmission: 'MS' | 'PS' | 'Smart' | 'SS' | 'CS';
   image: string;
-  officialSpecs: TractorSpecs;
+  popular?: boolean;
+  specifications: {
+    engine: string;
+    fuelTank: string;
+    liftingCapacity: string;
+    pto: string;
+    weight?: string;
+  };
   keyFeatures: string[];
   applications: string[];
-  useCase: string;
-  popular?: boolean;
 }
 
 export interface TractorFamily {
   familyName: string;
   familyId: string;
-  baseModel: string;
   description: string;
-  mainImage: string;
-  variants: TractorVariant[];
   category: string;
-  priceRange: string;
-  seoDescription: string;
+  mainImage: string;
+  models: TractorModel[];
+  hpRange: string;
 }
 
 export interface VariantOption {
