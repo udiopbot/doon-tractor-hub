@@ -133,8 +133,8 @@ const TractorCatalog = () => {
                   </SelectTrigger>
                   <SelectContent className="bg-background border shadow-lg">
                     <SelectItem value="all">All Categories</SelectItem>
-                    {categories.map((category, index) => (
-                      <SelectItem key={index} value={category}>{category}</SelectItem>
+                    {categories.map((category) => (
+                      <SelectItem key={category} value={category}>{category}</SelectItem>
                     ))}
                   </SelectContent>
                 </Select>
